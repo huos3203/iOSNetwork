@@ -21,6 +21,9 @@
 
 //用串行队列来控制任务有序
 @property (nonatomic, strong) dispatch_queue_t serialQueue;
+
+//requestQueue队列是否正在轮询
+@property (nonatomic, assign) BOOL isRetaining;
 @end
 
 static id _instance = nil;
@@ -47,6 +50,7 @@ static const int _maxCurrentNum = 4;
     if (self = [super init])
     {
         self.semaphore = dispatch_semaphore_create(_maxCurrentNum);
+        self.isRetaining = false;
     }
     return self;
 }
@@ -54,20 +58,25 @@ static const int _maxCurrentNum = 4;
 
 - (void)sendRequest:(ZYRequest *)request successBlock:(SuccessBlock)successBlock failureBlock:(FailedBlock)failedBlock
 {
+    
     [self queueAddRequest:request successBlock:successBlock failureBlock:failedBlock];
     [self dealRequestQueue];
 }
 
 - (void)dealRequestQueue
 {
-    ZYRequest *request = self.requestQueue.firstObject;
-    SuccessBlock successBlock = self.successQueue.firstObject;
-    FailedBlock failedBlock = self.failureQueue.firstObject;
+    if (self.isRetaining) return;
+    self.isRetaining = true;
     
-    if (request != nil)
-    {
-        //让任务有序处理
-        dispatch_async(self.serialQueue, ^{
+    //在子线程轮询，以免阻塞主线程
+    //让请求按队列先后顺序发送
+    dispatch_async(self.serialQueue, ^{
+        
+        while (self.requestQueue.count > 0)
+        {
+            ZYRequest *request = self.requestQueue.firstObject;
+            SuccessBlock successBlock = self.successQueue.firstObject;
+            FailedBlock failedBlock = self.failureQueue.firstObject;
             
             dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
             
@@ -76,7 +85,7 @@ static const int _maxCurrentNum = 4;
                 
                 dispatch_semaphore_signal(self.semaphore);
                 
-                //在这里可以根据状态码处理相应信息、序列化数据等
+                //在这里可以根据状态码处理相应信息、序列化数据、是否需要缓存等
                 successBlock(responseObject);
                 
             } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -92,58 +101,66 @@ static const int _maxCurrentNum = 4;
                 }
                 else  //处理错误信息
                 {
-                    
+                    failedBlock(error);
                 }
-                failedBlock(error);
+                
                 
             }];
             
+            [self queueRemoveFirstObj];
+        }
+        
+        if (self.requestQueue.count == 0)
+        {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self queueRemoveFirstObj];
+                self.isRetaining = false;
             });
-        });
-    }
+        }
+    });
+    
 }
 
 - (void)queueAddRequest:(ZYRequest *)request successBlock:successBlock failureBlock:failedBlock
 {
-    if (request == nil)
-    {
-        NSLog(@"ZYRequest 不能为nil");
-        return;
-    }
+    dispatch_async(self.serialQueue, ^{
+        if (request == nil)
+        {
+            NSLog(@"ZYRequest 不能为nil");
+            return;
+        }
+        
+        [self.requestQueue addObject:request];
+        //做容错处理，如果block为空，设置默认block
+        id tmpBlock = [successBlock copy];
+        if (successBlock == nil)
+        {
+            tmpBlock = [^(id obj){} copy];
+        }
+        [self.successQueue addObject:tmpBlock];
+        
+        
+        tmpBlock = [failedBlock copy];
+        if (failedBlock == nil)
+        {
+            tmpBlock = [^(id obj){} copy];
+        }
+        [self.failureQueue addObject:tmpBlock];
+    });
     
-    [self.requestQueue addObject:request];
-    //做容错处理，如果block为空，设置默认block
-    id tmpBlock = [successBlock copy];
-    if (successBlock == nil)
-    {
-        tmpBlock = [^(id obj){} copy];
-    }
-    [self.successQueue addObject:tmpBlock];
-    
-    
-    tmpBlock = [failedBlock copy];
-    if (failedBlock == nil)
-    {
-        tmpBlock = [^(id obj){} copy];
-    }
-    [self.failureQueue addObject:tmpBlock];
 }
 
 - (void)queueRemoveFirstObj
 {
-    if (self.requestQueue.count >= 1)
-    {
-        [self.requestQueue removeObjectAtIndex:0];
-        [self.successQueue removeObjectAtIndex:0];
-        [self.failureQueue removeObjectAtIndex:0];
-    }
+    dispatch_async(self.serialQueue, ^{
+        
+        if (self.requestQueue.count >= 1)
+        {
+            [self.requestQueue removeObjectAtIndex:0];
+            [self.successQueue removeObjectAtIndex:0];
+            [self.failureQueue removeObjectAtIndex:0];
+        }
+    });
     
-    if (self.requestQueue.count != 0)
-    {
-        [self dealRequestQueue];
-    }
 }
 
 #pragma mark - getter && setter
