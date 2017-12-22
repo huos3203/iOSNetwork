@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, ZYRequestReliability){
 @interface ZYRequest : NSObject<NSCoding>
 
 //存入数据库的唯一标示
-@property (nonatomic, strong) NSNumber *requestId;
+@property (nonatomic, assign) int requestId;
 
 /**请求参数对*/
 @property (nonatomic, strong) NSDictionary *params;

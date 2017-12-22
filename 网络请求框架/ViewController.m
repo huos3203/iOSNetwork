@@ -7,10 +7,11 @@
 //
 
 #import "ViewController.h"
-
+#import "ZYRequestManager.h"
+#import "ZYRequest.h"
 
 @interface ViewController ()
-@property (nonatomic, strong) dispatch_semaphore_t semaphore;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
 
 @implementation ViewController
@@ -19,24 +20,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(4);
-    dispatch_queue_t serialQueue = dispatch_queue_create("com.xxxx.www", DISPATCH_QUEUE_SERIAL);
-    for(int i = 0; i<= 1000; i++)
+    ZYRequestManager *mgr = [ZYRequestManager sharedInstance];
+    for (int i = 0; i < 100; i++)
     {
-        dispatch_async(serialQueue, ^{
-            
-            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-            dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                [NSThread sleepForTimeInterval:1];
-                NSLog(@"222222");
-                dispatch_semaphore_signal(semaphore);
-            });
-            NSLog(@"11111");
-            
-        });
+        ZYRequest *request = [[ZYRequest alloc] init];
+        request.urlStr = @"http://qf.56.com/pay/v4/giftList.ios";
+        request.params = @{@"type": @0, @"page": @1, @"rows": @150};
+        request.requestId = i;
+        
+        [mgr sendRequest:request successBlock:^(id obj) {
+            NSLog(@"++++++++%d", request.requestId);
+        } failureBlock:nil];
     }
-    NSLog(@"没有阻塞主线程");
     
+    self.scrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height + 30);
     
 }
 

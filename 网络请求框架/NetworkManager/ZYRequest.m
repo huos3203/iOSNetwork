@@ -41,7 +41,8 @@
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-    [aCoder encodeObject:self.requestId forKey:@"requestId"];
+//    [aCoder encodeObject:self.requestId forKey:@"requestId"];
+    [aCoder encodeInt:self.requestId forKey:@"requestId"];
     [aCoder encodeObject:self.urlStr forKey:@"urlStr"];
     [aCoder encodeInt:self.reliability forKey:@"reliability"];
     [aCoder encodeInt:self.retryCount forKey:@"retryCount"];
@@ -56,7 +57,7 @@
 {
     if (self = [super init])
     {
-        self.requestId = [aDecoder decodeObjectForKey:@"requestId"];
+        self.requestId = [aDecoder decodeIntForKey:@"requestId"];
         self.urlStr = [aDecoder decodeObjectForKey:@"urlStr"];
         self.reliability = [aDecoder decodeIntForKey:@"reliability"];
         self.retryCount = [aDecoder decodeIntForKey:@"retryCount"];

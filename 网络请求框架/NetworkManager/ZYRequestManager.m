@@ -19,8 +19,11 @@
 
 @property (nonatomic, strong) dispatch_semaphore_t semaphore;
 
-//用串行队列来控制任务有序
-@property (nonatomic, strong) dispatch_queue_t serialQueue;
+//这个串行队列用来控制任务有序的执行
+@property (nonatomic, strong) dispatch_queue_t taskQueue;
+
+//这个串行队列用来控制requestQueue\successQueue\failureQueue的添加顺序、删除顺序
+//@property (nonatomic, strong) dispatch_queue_t 
 
 //requestQueue队列是否正在轮询
 @property (nonatomic, assign) BOOL isRetaining;
@@ -58,7 +61,6 @@ static const int _maxCurrentNum = 4;
 
 - (void)sendRequest:(ZYRequest *)request successBlock:(SuccessBlock)successBlock failureBlock:(FailedBlock)failedBlock
 {
-    
     [self queueAddRequest:request successBlock:successBlock failureBlock:failedBlock];
     [self dealRequestQueue];
 }
@@ -70,7 +72,7 @@ static const int _maxCurrentNum = 4;
     
     //在子线程轮询，以免阻塞主线程
     //让请求按队列先后顺序发送
-    dispatch_async(self.serialQueue, ^{
+    dispatch_async(self.taskQueue, ^{
         
         while (self.requestQueue.count > 0)
         {
@@ -78,6 +80,9 @@ static const int _maxCurrentNum = 4;
             SuccessBlock successBlock = self.successQueue.firstObject;
             FailedBlock failedBlock = self.failureQueue.firstObject;
             
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self queueRemoveFirstObj];
+            });
             dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
             
             //利用AFN发送请求
@@ -85,6 +90,7 @@ static const int _maxCurrentNum = 4;
                 
                 dispatch_semaphore_signal(self.semaphore);
                 
+//                NSLog(@"++++++++%d", request.requestId);
                 //在这里可以根据状态码处理相应信息、序列化数据、是否需要缓存等
                 successBlock(responseObject);
                 
@@ -92,8 +98,9 @@ static const int _maxCurrentNum = 4;
                 
                 dispatch_semaphore_signal(self.semaphore);
                 
-                //请求失败之后，首先判断是否需要再次请求
-                if (request.retryCount > 0)
+                //请求失败之后，根据约定的错误码判断是否需要再次请求
+                //这里，-1001是AFN的超时error
+                if (error.code == -1001 &&request.retryCount > 0)
                 {
                     [request reduceRetryCount];
                     [self queueAddRequest:request successBlock:successBlock failureBlock:failedBlock];
@@ -103,11 +110,9 @@ static const int _maxCurrentNum = 4;
                 {
                     failedBlock(error);
                 }
-                
-                
             }];
             
-            [self queueRemoveFirstObj];
+            
         }
         
         if (self.requestQueue.count == 0)
@@ -122,45 +127,42 @@ static const int _maxCurrentNum = 4;
 
 - (void)queueAddRequest:(ZYRequest *)request successBlock:successBlock failureBlock:failedBlock
 {
-    dispatch_async(self.serialQueue, ^{
-        if (request == nil)
-        {
-            NSLog(@"ZYRequest 不能为nil");
-            return;
-        }
-        
-        [self.requestQueue addObject:request];
-        //做容错处理，如果block为空，设置默认block
-        id tmpBlock = [successBlock copy];
-        if (successBlock == nil)
-        {
-            tmpBlock = [^(id obj){} copy];
-        }
-        [self.successQueue addObject:tmpBlock];
-        
-        
-        tmpBlock = [failedBlock copy];
-        if (failedBlock == nil)
-        {
-            tmpBlock = [^(id obj){} copy];
-        }
-        [self.failureQueue addObject:tmpBlock];
-    });
+    
+    if (request == nil)
+    {
+        NSLog(@"ZYRequest 不能为nil");
+        return;
+    }
+    
+    [self.requestQueue addObject:request];
+    //做容错处理，如果block为空，设置默认block
+    id tmpBlock = [successBlock copy];
+    if (successBlock == nil)
+    {
+        tmpBlock = [^(id obj){} copy];
+    }
+    [self.successQueue addObject:tmpBlock];
+    
+    
+    tmpBlock = [failedBlock copy];
+    if (failedBlock == nil)
+    {
+        tmpBlock = [^(id obj){} copy];
+    }
+    [self.failureQueue addObject:tmpBlock];
+    
     
 }
 
 - (void)queueRemoveFirstObj
 {
-    dispatch_async(self.serialQueue, ^{
-        
-        if (self.requestQueue.count >= 1)
-        {
-            [self.requestQueue removeObjectAtIndex:0];
-            [self.successQueue removeObjectAtIndex:0];
-            [self.failureQueue removeObjectAtIndex:0];
-        }
-    });
     
+    if (self.requestQueue.count >= 1)
+    {
+        [self.requestQueue removeObjectAtIndex:0];
+        [self.successQueue removeObjectAtIndex:0];
+        [self.failureQueue removeObjectAtIndex:0];
+    }
 }
 
 #pragma mark - getter && setter
@@ -191,12 +193,12 @@ static const int _maxCurrentNum = 4;
     return _failureQueue;
 }
 
-- (dispatch_queue_t)serialQueue
+- (dispatch_queue_t)taskQueue
 {
-    if (!_serialQueue)
+    if (!_taskQueue)
     {
-        _serialQueue = dispatch_queue_create("com.xxxx.www", DISPATCH_QUEUE_SERIAL);
+        _taskQueue = dispatch_queue_create("com.xxxx.www", DISPATCH_QUEUE_SERIAL);
     }
-    return _serialQueue;
+    return _taskQueue;
 }
 @end
