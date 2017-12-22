@@ -53,9 +53,29 @@ static const int _maxCurrentNum = 4;
 
 - (void)sendRequest:(ZYRequest *)request successBlock:(SuccessBlock)successBlock failureBlock:(FailedBlock)failedBlock
 {
+    if (request == nil)
+    {
+        NSLog(@"ZYRequest 不能为nil");
+        return;
+    }
     [self.requestQueue addObject:request];
-    [self.successQueue addObject:[successBlock copy]];
-    [self.failureQueue addObject:[failedBlock copy]];
+    
+    //做容错处理，如果block为空，设置默认block
+    id tmpBlock = [successBlock copy];
+    if (successBlock == nil)
+    {
+        tmpBlock = [^(id obj){} copy];
+    }
+    [self.successQueue addObject:tmpBlock];
+    
+    
+    tmpBlock = [failedBlock copy];
+    if (failedBlock == nil)
+    {
+        tmpBlock = [^(id obj){} copy];
+    }
+    [self.failureQueue addObject:tmpBlock];
+    
     
     [self dealRequestQueue];
 }
@@ -73,9 +93,21 @@ static const int _maxCurrentNum = 4;
             dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
             
             //利用AFN发送请求
+            [[YQDHttpClinetCore sharedClient] requestWithPath:request.urlStr method:request.method parameters:request.params prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+                
+                //在这里可以根据状态码处理相应信息、序列化数据等
+                
+                successBlock(responseObject);
+                dispatch_semaphore_signal(self.semaphore);
+            } failure:^(NSURLSessionDataTask *task, NSError *error) {
+                //处理错误信息
+                failedBlock(error);
+                dispatch_semaphore_signal(self.semaphore);
+            }];
             
-            
-            [self queueRemoveFirstObj];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self queueRemoveFirstObj];
+            });
         });
     }
 }

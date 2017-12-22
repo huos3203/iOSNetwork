@@ -23,11 +23,11 @@
     return self;
 }
 
-- (void)setType:(enum ZYRequestReliability)type
+- (void)setReliability:(ZYRequestReliability)reliability
 {
-    _type = type;
+    _reliability = reliability;
     
-    if (type == ZYRequestReliabilityNormal)
+    if (reliability == ZYRequestReliabilityNormal)
     {
         _retryCount = 1;
     }
@@ -37,9 +37,10 @@
 {
     [aCoder encodeObject:self.requestId forKey:@"requestId"];
     [aCoder encodeObject:self.urlStr forKey:@"urlStr"];
-    [aCoder encodeInt:self.type forKey:@"type"];
+    [aCoder encodeInt:self.reliability forKey:@"reliability"];
     [aCoder encodeInt:self.retryCount forKey:@"retryCount"];
     [aCoder encodeObject:self.cacheKey forKey:@"cacheKey"];
+    [aCoder encodeInt:self.method forKey:@"method"];
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:self.params options:NSJSONWritingPrettyPrinted error:nil];
     NSString *ParamsStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
@@ -51,9 +52,10 @@
     {
         self.requestId = [aDecoder decodeObjectForKey:@"requestId"];
         self.urlStr = [aDecoder decodeObjectForKey:@"urlStr"];
-        self.type = [aDecoder decodeIntForKey:@"type"];
+        self.reliability = [aDecoder decodeIntForKey:@"reliability"];
         self.retryCount = [aDecoder decodeIntForKey:@"retryCount"];
         self.cacheKey = [aDecoder decodeObjectForKey:@"cacheKey"];
+        self.method = [aDecoder decodeIntForKey:@"method"];
         
         NSString *paramStr = [aDecoder decodeObjectForKey:@"params"];
         NSData *data = [paramStr dataUsingEncoding:NSUTF8StringEncoding];

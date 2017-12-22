@@ -8,13 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
+#import "ZYRequestMacro.h"
 
-typedef NS_ENUM(NSInteger, YQDRequestType) {
-    YQDRequestTypeGet,
-    YQDRequestTypePost,
-    YQDRequestTypeDelete,
-    YQDRequestTypePut
-};
 
 
 /**
