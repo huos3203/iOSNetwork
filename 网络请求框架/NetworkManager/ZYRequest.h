@@ -8,6 +8,34 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ZYRequest : NSObject
+typedef NS_ENUM(NSInteger, ZYRequestReliability){
 
+    //必须要成功的请求，如果不成功就存入DB，然后在网络好的情况下继续发送，类似微信朋友圈
+    ZYRequestReliabilityStoreToDB,
+    
+    //如果没有发送成功，就放入调度队列再次发送
+    ZYRequestReliabilityRetry,
+
+    //普通请求，成不成功不影响业务，不需要重新发送
+    //类似统计、后台拉取本地已有的配置之类的请求
+    ZYRequestReliabilityNormal
+};
+
+@interface ZYRequest : NSObject<NSCoding>
+
+//存入数据库的唯一标示
+@property (nonatomic, strong) NSNumber *requestId;
+
+/**请求参数对*/
+@property (nonatomic, strong) NSDictionary *params;
+
+@property (nonatomic, copy) NSString *urlStr;
+
+@property (nonatomic, assign) enum ZYRequestReliability type;
+
+//没发送成功触发重发的次数
+@property (nonatomic, assign, readonly) int retryCount;
+
+//如果cacheKey为nil，就不会缓存响应的数据
+@property (nonatomic, copy) NSString *cacheKey;
 @end

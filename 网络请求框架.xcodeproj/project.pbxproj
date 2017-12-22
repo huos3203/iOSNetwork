@@ -15,6 +15,10 @@
 		094336D21FEB6AAD00EF74FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 094336D11FEB6AAD00EF74FF /* main.m */; };
 		094336DC1FEB6AAD00EF74FF /* ______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 094336DB1FEB6AAD00EF74FF /* ______Tests.m */; };
 		094336E71FEB6AAD00EF74FF /* ______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 094336E61FEB6AAD00EF74FF /* ______UITests.m */; };
+		094337011FEBC17100EF74FF /* ZYRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 094337001FEBC17100EF74FF /* ZYRequest.m */; };
+		094337041FEBC17E00EF74FF /* ZYRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 094337021FEBC17D00EF74FF /* ZYRequestManager.m */; };
+		09F1AE1B1FEC9F5700119511 /* YQDHttpClinetCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F1AE1A1FEC9F5700119511 /* YQDHttpClinetCore.m */; };
+		1E50C0FDA7ED87606448D8B4 /* Pods_______.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C68FCF94550777135B8BE43 /* Pods_______.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,15 @@
 		094336E21FEB6AAD00EF74FF /* 网络请求框架UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "网络请求框架UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		094336E61FEB6AAD00EF74FF /* ______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______UITests.m"; sourceTree = "<group>"; };
 		094336E81FEB6AAD00EF74FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		094336FF1FEBC17100EF74FF /* ZYRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYRequest.h; sourceTree = "<group>"; };
+		094337001FEBC17100EF74FF /* ZYRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYRequest.m; sourceTree = "<group>"; };
+		094337021FEBC17D00EF74FF /* ZYRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYRequestManager.m; sourceTree = "<group>"; };
+		094337031FEBC17D00EF74FF /* ZYRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYRequestManager.h; sourceTree = "<group>"; };
+		09F1AE191FEC9F5700119511 /* YQDHttpClinetCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQDHttpClinetCore.h; sourceTree = "<group>"; };
+		09F1AE1A1FEC9F5700119511 /* YQDHttpClinetCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQDHttpClinetCore.m; sourceTree = "<group>"; };
+		2C68FCF94550777135B8BE43 /* Pods_______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_______.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39D57784AE419F640C62ADB2 /* Pods-网络请求框架.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网络请求框架.release.xcconfig"; path = "Pods/Target Support Files/Pods-网络请求框架/Pods-网络请求框架.release.xcconfig"; sourceTree = "<group>"; };
+		804E154617E811741B154B47 /* Pods-网络请求框架.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网络请求框架.debug.xcconfig"; path = "Pods/Target Support Files/Pods-网络请求框架/Pods-网络请求框架.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E50C0FDA7ED87606448D8B4 /* Pods_______.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +99,8 @@
 				094336DA1FEB6AAD00EF74FF /* 网络请求框架Tests */,
 				094336E51FEB6AAD00EF74FF /* 网络请求框架UITests */,
 				094336C01FEB6AAC00EF74FF /* Products */,
+				3D12E0247544ED7E07ABA4D4 /* Pods */,
+				53E99B7D197E97FECC1CDA0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +117,7 @@
 		094336C11FEB6AAC00EF74FF /* 网络请求框架 */ = {
 			isa = PBXGroup;
 			children = (
+				094336F51FEB90CB00EF74FF /* NetworkManager */,
 				094336C21FEB6AAC00EF74FF /* AppDelegate.h */,
 				094336C31FEB6AAC00EF74FF /* AppDelegate.m */,
 				094336C51FEB6AAC00EF74FF /* ViewController.h */,
@@ -132,6 +149,36 @@
 			path = "网络请求框架UITests";
 			sourceTree = "<group>";
 		};
+		094336F51FEB90CB00EF74FF /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				09F1AE191FEC9F5700119511 /* YQDHttpClinetCore.h */,
+				09F1AE1A1FEC9F5700119511 /* YQDHttpClinetCore.m */,
+				094336FF1FEBC17100EF74FF /* ZYRequest.h */,
+				094337001FEBC17100EF74FF /* ZYRequest.m */,
+				094337031FEBC17D00EF74FF /* ZYRequestManager.h */,
+				094337021FEBC17D00EF74FF /* ZYRequestManager.m */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		3D12E0247544ED7E07ABA4D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				804E154617E811741B154B47 /* Pods-网络请求框架.debug.xcconfig */,
+				39D57784AE419F640C62ADB2 /* Pods-网络请求框架.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		53E99B7D197E97FECC1CDA0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C68FCF94550777135B8BE43 /* Pods_______.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 094336EB1FEB6AAD00EF74FF /* Build configuration list for PBXNativeTarget "网络请求框架" */;
 			buildPhases = (
+				0465C93B02B42B9F1D72E671 /* [CP] Check Pods Manifest.lock */,
 				094336BB1FEB6AAC00EF74FF /* Sources */,
 				094336BC1FEB6AAC00EF74FF /* Frameworks */,
 				094336BD1FEB6AAC00EF74FF /* Resources */,
+				8D2A9E4FB282AD9AEE902140 /* [CP] Embed Pods Frameworks */,
+				57117EB2E397E89D4916408E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,6 +310,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0465C93B02B42B9F1D72E671 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-网络请求框架-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57117EB2E397E89D4916408E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-网络请求框架/Pods-网络请求框架-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D2A9E4FB282AD9AEE902140 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-网络请求框架/Pods-网络请求框架-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-网络请求框架/Pods-网络请求框架-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		094336BB1FEB6AAC00EF74FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -267,7 +373,10 @@
 			files = (
 				094336C71FEB6AAD00EF74FF /* ViewController.m in Sources */,
 				094336D21FEB6AAD00EF74FF /* main.m in Sources */,
+				094337011FEBC17100EF74FF /* ZYRequest.m in Sources */,
 				094336C41FEB6AAC00EF74FF /* AppDelegate.m in Sources */,
+				09F1AE1B1FEC9F5700119511 /* YQDHttpClinetCore.m in Sources */,
+				094337041FEBC17E00EF74FF /* ZYRequestManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +537,7 @@
 		};
 		094336EC1FEB6AAD00EF74FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 804E154617E811741B154B47 /* Pods-网络请求框架.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,6 +552,7 @@
 		};
 		094336ED1FEB6AAD00EF74FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39D57784AE419F640C62ADB2 /* Pods-网络请求框架.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

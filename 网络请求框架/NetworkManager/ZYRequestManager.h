@@ -8,6 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+@class ZYRequest;
+
+/**
+ *  成功时调用的Block
+ */
+typedef void (^SuccessBlock)(id obj);
+
+/**
+ *  失败时调用的Block
+ */
+typedef void (^FailedBlock)(id obj);
+
 @interface ZYRequestManager : NSObject
 
++ (instancetype)sharedInstance;
+
+- (void)sendRequest:(ZYRequest *)request successBlock:(SuccessBlock)successBlock failureBlock:(FailedBlock)failedBlock;
 @end
