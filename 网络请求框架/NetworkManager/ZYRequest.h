@@ -50,4 +50,7 @@ typedef NS_ENUM(NSInteger, ZYRequestReliability){
 
 //如果cacheKey为nil，就不会缓存响应的数据
 @property (nonatomic, copy) NSString *cacheKey;
+
+
+- (void)reduceRetryCount;
 @end

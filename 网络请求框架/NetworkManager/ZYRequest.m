@@ -33,6 +33,12 @@
     }
 }
 
+- (void)reduceRetryCount
+{
+    self.retryCount--;
+    if (self.retryCount < 0) self.retryCount = 0;
+}
+
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.requestId forKey:@"requestId"];
