@@ -28,9 +28,17 @@
         request.params = @{@"type": @0, @"page": @1, @"rows": @150};
         request.requestId = i;
         
-        [mgr sendRequest:request successBlock:^(id obj) {
-            NSLog(@"++++++++%d", request.requestId);
-        } failureBlock:nil];
+        CGFloat duration = (arc4random() % 100) * 0.01 + 0.1;
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+            [mgr sendRequest:request successBlock:^(id obj) {
+                NSLog(@"~~~~~~~~~~~~~[%d]", request.requestId);
+            } failureBlock:nil];
+            
+        });
+        
+        
     }
     
     self.scrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height + 30);

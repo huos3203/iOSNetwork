@@ -80,6 +80,7 @@ static const int _maxCurrentNum = 4;
             SuccessBlock successBlock = self.successQueue.firstObject;
             FailedBlock failedBlock = self.failureQueue.firstObject;
             
+            NSLog(@"---------------[%d]", request.requestId);
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self queueRemoveFirstObj];
             });
@@ -102,6 +103,7 @@ static const int _maxCurrentNum = 4;
                 //这里，-1001是AFN的超时error
                 if (error.code == -1001 &&request.retryCount > 0)
                 {
+                    NSLog(@"!!!!!!!!!!!!!!![%d]", request.requestId);
                     [request reduceRetryCount];
                     [self queueAddRequest:request successBlock:successBlock failureBlock:failedBlock];
                     [self dealRequestQueue];
@@ -133,6 +135,8 @@ static const int _maxCurrentNum = 4;
         NSLog(@"ZYRequest 不能为nil");
         return;
     }
+    
+    NSLog(@"++++++++++++++[%d]", request.requestId);
     
     [self.requestQueue addObject:request];
     //做容错处理，如果block为空，设置默认block

@@ -61,7 +61,7 @@ static id _instance = nil;
         
         //超时时间
         [self.manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-        self.manager.requestSerializer.timeoutInterval = 4.f;
+        self.manager.requestSerializer.timeoutInterval = 1.0f;
         [self.manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
         
         //添加http的header
