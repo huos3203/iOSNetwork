@@ -9,6 +9,7 @@
 #import "ZYRequestManager.h"
 #import "ZYRequest.h"
 #import "YQDHttpClinetCore.h"
+#import "ZYRequestCache.h"
 
 @interface ZYRequestManager()
 @property (nonatomic, strong) NSMutableArray *requestQueue;
@@ -91,6 +92,18 @@ static const int _maxCurrentNum = 4;
                 
 //                NSLog(@"++++++++%d", request.requestId);
                 //在这里可以根据状态码处理相应信息、序列化数据、是否需要缓存等
+                
+                if (request.cacheKey)
+                {
+                    NSError *error = nil;
+                    NSData *data = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:&error];
+                    
+                    if (!error)
+                    {
+                        [[ZYRequestCache sharedInstance] saveData:data ForKey:request.cacheKey];
+                    }
+                }
+                
                 successBlock(responseObject);
                 
             } failure:^(NSURLSessionDataTask *task, NSError *error) {

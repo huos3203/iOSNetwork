@@ -28,7 +28,10 @@
         request.params = @{@"type": @0, @"page": @1, @"rows": @150};
         request.requestId = i;
         
-        CGFloat duration = arc4random() % 5;
+        request.cacheKey = [NSString stringWithFormat:@"cache%d", i];
+        
+        
+        CGFloat duration = 0;
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             
