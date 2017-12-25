@@ -11,8 +11,14 @@
 @interface ZYRequestCache : NSObject
 + (instancetype)sharedInstance;
 
+/**
+ 从沙盒里面读取数据
+ */
 - (NSData *)readDataForKey:(NSString *)key;
 
+/**
+ 将data存入沙盒路径
+ */
 - (void)saveData:(NSData *)data ForKey:(NSString *)key;
 
 @end

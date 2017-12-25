@@ -41,7 +41,6 @@
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-//    [aCoder encodeObject:self.requestId forKey:@"requestId"];
     [aCoder encodeInt:self.requestId forKey:@"requestId"];
     [aCoder encodeObject:self.urlStr forKey:@"urlStr"];
     [aCoder encodeInt:self.reliability forKey:@"reliability"];

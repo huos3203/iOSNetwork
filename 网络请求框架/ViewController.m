@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ZYRequestManager.h"
 #import "ZYRequest.h"
+#import "ZYRequestCache.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -43,6 +44,14 @@
     }
     
     self.scrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height + 30);
+    
+    
+    //根据key读取缓存
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSData *data = [[ZYRequestCache sharedInstance] readDataForKey:@"cache0"];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSLog(@"%@", dict);
+    });
     
 }
 
