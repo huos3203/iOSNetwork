@@ -21,14 +21,14 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     ZYRequestManager *mgr = [ZYRequestManager sharedInstance];
-    for (int i = 0; i < 100; i++)
+    for (int i = 0; i < 30; i++)
     {
         ZYRequest *request = [[ZYRequest alloc] init];
         request.urlStr = @"http://qf.56.com/pay/v4/giftList.ios";
         request.params = @{@"type": @0, @"page": @1, @"rows": @150};
         request.requestId = i;
         
-        CGFloat duration = (arc4random() % 100) * 0.01 + 0.1;
+        CGFloat duration = arc4random() % 5;
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             
@@ -37,8 +37,6 @@
             } failureBlock:nil];
             
         });
-        
-        
     }
     
     self.scrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height + 30);

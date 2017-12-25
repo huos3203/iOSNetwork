@@ -22,11 +22,9 @@
 //这个串行队列用来控制任务有序的执行
 @property (nonatomic, strong) dispatch_queue_t taskQueue;
 
-//这个串行队列用来控制requestQueue\successQueue\failureQueue的添加顺序、删除顺序
-//@property (nonatomic, strong) dispatch_queue_t 
-
 //requestQueue队列是否正在轮询
 @property (nonatomic, assign) BOOL isRetaining;
+
 @end
 
 static id _instance = nil;

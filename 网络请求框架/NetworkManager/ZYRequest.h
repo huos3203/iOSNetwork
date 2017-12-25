@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "ZYRequestMacro.h"
 
+
+
 typedef NS_ENUM(NSInteger, ZYRequestReliability){
 
     //如果没有发送成功，就放入调度队列再次发送
