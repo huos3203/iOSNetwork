@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ZYRequestMacro.h"
+#import <Realm/Realm.h>
 
 
 
@@ -25,7 +26,7 @@ typedef NS_ENUM(NSInteger, ZYRequestReliability){
 };
 
 
-@interface ZYRequest : NSObject<NSCoding>
+@interface ZYRequest : RLMObject
 
 //存入数据库的唯一标示
 @property (nonatomic, assign) int requestId;
@@ -33,26 +34,42 @@ typedef NS_ENUM(NSInteger, ZYRequestReliability){
 /**请求参数对*/
 @property (nonatomic, strong) NSDictionary *params;
 
-@property (nonatomic, copy) NSString *urlStr;
-
 
 /**
- 默认重发
+ 请求的url
+ */
+@property (nonatomic, copy) NSString *urlStr;
+
+/**
+ 请求重复测量，默认重发
  */
 @property (nonatomic, assign) ZYRequestReliability reliability;
 
-
 /**
- 默认get请求
+ 请求方法，默认get请求
  */
 @property (nonatomic, assign) YQDRequestType method;
 
-//没发送成功触发重发的次数
+
+/**
+ 是否需要缓存响应的数据，如果cacheKey为nil，就不会缓存响应的数据
+ */
+@property (nonatomic, copy) NSString *cacheKey;
+
+/**
+ 请求没发送成功，重新发送的次数
+ */
 @property (nonatomic, assign, readonly) int retryCount;
 
-//如果cacheKey为nil，就不会缓存响应的数据
-@property (nonatomic, copy) NSString *cacheKey;
+
+/**
+ realm不支持NSDictionary，所以params直接转化为字符串存储
+ 只在请求需要存入数据库中，此参数才有相应的作用
+ ZYRequestReliabilityStoreToDB这种类型下
+ */
+@property (nonatomic, copy, readonly) NSString *paramStr;
 
 
 - (void)reduceRetryCount;
 @end
+RLM_ARRAY_TYPE(ZYRequest)

@@ -53,10 +53,10 @@
 		094336D01FEB6AAD00EF74FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094336D11FEB6AAD00EF74FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		094336D71FEB6AAD00EF74FF /* 网络请求框架Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "网络请求框架Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		094336DB1FEB6AAD00EF74FF /* ______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______Tests.m"; sourceTree = "<group>"; };
+		094336DB1FEB6AAD00EF74FF /* ______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ______Tests.m; sourceTree = "<group>"; };
 		094336DD1FEB6AAD00EF74FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094336E21FEB6AAD00EF74FF /* 网络请求框架UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "网络请求框架UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		094336E61FEB6AAD00EF74FF /* ______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______UITests.m"; sourceTree = "<group>"; };
+		094336E61FEB6AAD00EF74FF /* ______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ______UITests.m; sourceTree = "<group>"; };
 		094336E81FEB6AAD00EF74FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094336FF1FEBC17100EF74FF /* ZYRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYRequest.h; sourceTree = "<group>"; };
 		094337001FEBC17100EF74FF /* ZYRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYRequest.m; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		09F1AE191FEC9F5700119511 /* YQDHttpClinetCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQDHttpClinetCore.h; sourceTree = "<group>"; };
 		09F1AE1A1FEC9F5700119511 /* YQDHttpClinetCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQDHttpClinetCore.m; sourceTree = "<group>"; };
 		09F1AE1D1FECB9B500119511 /* ZYRequestMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYRequestMacro.h; sourceTree = "<group>"; };
-		2C68FCF94550777135B8BE43 /* Pods_______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_______.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C68FCF94550777135B8BE43 /* Pods_______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_______.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D57784AE419F640C62ADB2 /* Pods-网络请求框架.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网络请求框架.release.xcconfig"; path = "Pods/Target Support Files/Pods-网络请求框架/Pods-网络请求框架.release.xcconfig"; sourceTree = "<group>"; };
 		804E154617E811741B154B47 /* Pods-网络请求框架.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网络请求框架.debug.xcconfig"; path = "Pods/Target Support Files/Pods-网络请求框架/Pods-网络请求框架.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -377,12 +377,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-网络请求框架/Pods-网络请求框架-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -3,6 +3,6 @@ use_frameworks!
 
 target '网络请求框架' do
 
-    pod 'YTKNetwork'
-
+    pod 'AFNetworking', '~> 3.0'
+    pod 'Realm', '~> 3.0.2'
 end

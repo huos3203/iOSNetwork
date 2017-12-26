@@ -10,6 +10,7 @@
 
 @interface ZYRequest()
 @property (nonatomic, assign, readwrite) int retryCount;
+@property (nonatomic, copy, readwrite) NSString *paramStr;
 @end
 
 @implementation ZYRequest
@@ -19,6 +20,9 @@
     if (self = [super init])
     {
         self.retryCount = 3;
+        self.reliability = ZYRequestReliabilityRetry;
+        self.method = YQDRequestTypeGet;
+        self.cacheKey = nil;
     }
     return self;
 }
@@ -31,6 +35,19 @@
     {
         _retryCount = 1;
     }
+    
+    [self setParams:_params];
+}
+
+- (void)setParams:(NSDictionary *)params
+{
+    _params = params;
+    
+    if (_reliability == ZYRequestReliabilityStoreToDB)
+    {
+        NSData *data = [NSJSONSerialization dataWithJSONObject:self.params options:NSJSONWritingPrettyPrinted error:nil];
+        self.paramStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    }
 }
 
 - (void)reduceRetryCount
@@ -39,34 +56,16 @@
     if (self.retryCount < 0) self.retryCount = 0;
 }
 
-- (void)encodeWithCoder:(NSCoder *)aCoder
+#pragma mark - realm的相关处理
+
++ (NSString *)primaryKey
 {
-    [aCoder encodeInt:self.requestId forKey:@"requestId"];
-    [aCoder encodeObject:self.urlStr forKey:@"urlStr"];
-    [aCoder encodeInt:self.reliability forKey:@"reliability"];
-    [aCoder encodeInt:self.retryCount forKey:@"retryCount"];
-    [aCoder encodeObject:self.cacheKey forKey:@"cacheKey"];
-    [aCoder encodeInt:self.method forKey:@"method"];
-    
-    NSData *data = [NSJSONSerialization dataWithJSONObject:self.params options:NSJSONWritingPrettyPrinted error:nil];
-    NSString *ParamsStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    [aCoder encodeObject:ParamsStr forKey:@"params"];
+    return @"requestId";
 }
-- (nullable instancetype)initWithCoder:(NSCoder *)aDecoder
+
++ (NSArray<NSString *> *)ignoredProperties
 {
-    if (self = [super init])
-    {
-        self.requestId = [aDecoder decodeIntForKey:@"requestId"];
-        self.urlStr = [aDecoder decodeObjectForKey:@"urlStr"];
-        self.reliability = [aDecoder decodeIntForKey:@"reliability"];
-        self.retryCount = [aDecoder decodeIntForKey:@"retryCount"];
-        self.cacheKey = [aDecoder decodeObjectForKey:@"cacheKey"];
-        self.method = [aDecoder decodeIntForKey:@"method"];
-        
-        NSString *paramStr = [aDecoder decodeObjectForKey:@"params"];
-        NSData *data = [paramStr dataUsingEncoding:NSUTF8StringEncoding];
-        self.params = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    }
-    return self;
+    return @[@"params"];
 }
+
 @end
