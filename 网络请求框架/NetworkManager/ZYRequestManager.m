@@ -10,6 +10,7 @@
 #import "ZYRequest.h"
 #import "YQDHttpClinetCore.h"
 #import "ZYRequestCache.h"
+#import "ZYRequestRealm.h"
 
 @interface ZYRequestManager()
 @property (nonatomic, strong) NSMutableArray *requestQueue;
@@ -60,6 +61,15 @@ static const int _maxCurrentNum = 4;
 
 - (void)sendRequest:(ZYRequest *)request successBlock:(SuccessBlock)successBlock failureBlock:(FailedBlock)failedBlock
 {
+    //如果是ZYRequestReliabilityStoreToDB类型
+    //第一时间先存储到数据库，然后再发送该请求，如果成功再从数据库中移除
+    //不成功再出发某机制从数据库中取出重新发送
+    if (request.reliability == ZYRequestReliabilityStoreToDB)
+    {
+        request.successBlockData = [[successBlock copy] dataUsingEncoding:NSUTF8StringEncoding];
+        request.failureBlockData = [[failedBlock copy] dataUsingEncoding:NSUTF8StringEncoding];
+        [[ZYRequestRealm sharedInstance] addOrUpdateObj:request];
+    }
     [self queueAddRequest:request successBlock:successBlock failureBlock:failedBlock];
     [self dealRequestQueue];
 }
@@ -92,7 +102,6 @@ static const int _maxCurrentNum = 4;
                 
 //                NSLog(@"++++++++%d", request.requestId);
                 //在这里可以根据状态码处理相应信息、序列化数据、是否需要缓存等
-                
                 if (request.cacheKey)
                 {
                     NSError *error = nil;
@@ -102,6 +111,12 @@ static const int _maxCurrentNum = 4;
                     {
                         [[ZYRequestCache sharedInstance] saveData:data ForKey:request.cacheKey];
                     }
+                }
+                
+                //在成功的时候移除realm数据库中的缓存
+                if (request.reliability == ZYRequestReliabilityStoreToDB)
+                {
+                    [[ZYRequestRealm sharedInstance] deleteObj:request];
                 }
                 
                 successBlock(responseObject);
@@ -124,8 +139,6 @@ static const int _maxCurrentNum = 4;
                     failedBlock(error);
                 }
             }];
-            
-            
         }
         
         if (self.requestQueue.count == 0)

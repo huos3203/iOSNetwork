@@ -10,7 +10,7 @@
 #import <Realm/Realm.h>
 
 @interface ZYRequestRealm : NSObject
-+ (instancetype)shareInstance;
++ (instancetype)sharedInstance;
 
 //添加or更新对象
 - (void)addOrUpdateObj:(RLMObject *)obj;

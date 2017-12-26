@@ -16,4 +16,6 @@ typedef NS_ENUM(NSInteger, YQDRequestType) {
     YQDRequestTypePut
 };
 
+BOOL kIsConnectingNetwork = true;
+
 #endif /* ZYRequestMacro_h */

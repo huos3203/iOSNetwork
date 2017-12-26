@@ -19,6 +19,11 @@ static id _instance = nil;
 
 @implementation YQDHttpClinetCore
 
++ (void)load
+{
+    [[YQDHttpClinetCore sharedClient] startMonitoringNetwork];
+}
+
 #pragma mark - 单利相关方法
 
 + (instancetype)sharedClient
@@ -94,11 +99,13 @@ static id _instance = nil;
     [self.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         switch (status) {
             case AFNetworkReachabilityStatusNotReachable: {
+                kIsConnectingNetwork = false;
                 NSLog(@"无网络");
                 break;
             }
                 
             default:
+                kIsConnectingNetwork = true;
                 NSLog(@"有网络");
                 break;
         }

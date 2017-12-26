@@ -8,7 +8,6 @@
 
 #import "ZYRequestRealm.h"
 #import "ZYRequest.h"
-#import <objc/runtime.h>
 
 
 @interface ZYRequestRealm()
@@ -18,7 +17,7 @@
 static id _instance = nil;
 
 @implementation ZYRequestRealm
-+ (instancetype)shareInstance
++ (instancetype)sharedInstance
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
