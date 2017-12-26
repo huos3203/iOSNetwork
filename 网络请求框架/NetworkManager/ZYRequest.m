@@ -11,6 +11,8 @@
 @interface ZYRequest()
 @property (nonatomic, assign, readwrite) int retryCount;
 @property (nonatomic, copy, readwrite) NSString *paramStr;
+
+
 @end
 
 @implementation ZYRequest

@@ -41,7 +41,7 @@ typedef NS_ENUM(NSInteger, ZYRequestReliability){
 @property (nonatomic, copy) NSString *urlStr;
 
 /**
- 请求重复测量，默认重发
+ 请求重复策略，默认重发
  */
 @property (nonatomic, assign) ZYRequestReliability reliability;
 
@@ -69,6 +69,14 @@ typedef NS_ENUM(NSInteger, ZYRequestReliability){
  */
 @property (nonatomic, copy, readonly) NSString *paramStr;
 
+
+
+/**
+ 如果这个request是ZYRequestReliabilityStoreToDB类型
+ 相应的把callback的两个block也是需要存入数据库
+ */
+@property (nonatomic, strong) NSData *successBlockData;
+@property (nonatomic, strong) NSData *failureBlockData;
 
 - (void)reduceRetryCount;
 @end

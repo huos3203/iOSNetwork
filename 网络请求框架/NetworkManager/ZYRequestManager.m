@@ -166,7 +166,6 @@ static const int _maxCurrentNum = 4;
     }
     [self.failureQueue addObject:tmpBlock];
     
-    
 }
 
 - (void)queueRemoveFirstObj

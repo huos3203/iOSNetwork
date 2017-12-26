@@ -17,6 +17,7 @@
 		094336E71FEB6AAD00EF74FF /* ______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 094336E61FEB6AAD00EF74FF /* ______UITests.m */; };
 		094337011FEBC17100EF74FF /* ZYRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 094337001FEBC17100EF74FF /* ZYRequest.m */; };
 		094337041FEBC17E00EF74FF /* ZYRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 094337021FEBC17D00EF74FF /* ZYRequestManager.m */; };
+		09B539A91FF1E90D00FF08F5 /* ZYRequestRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B539A81FF1E90D00FF08F5 /* ZYRequestRealm.m */; };
 		09D238C21FF0E65E00F72E7A /* YQDStorageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D238C11FF0E65E00F72E7A /* YQDStorageUtils.m */; };
 		09D238C61FF0E83B00F72E7A /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D238C51FF0E83B00F72E7A /* NSString+MD5.m */; };
 		09D238C91FF0E91E00F72E7A /* ZYRequestCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D238C81FF0E91E00F72E7A /* ZYRequestCache.m */; };
@@ -53,15 +54,17 @@
 		094336D01FEB6AAD00EF74FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094336D11FEB6AAD00EF74FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		094336D71FEB6AAD00EF74FF /* 网络请求框架Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "网络请求框架Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		094336DB1FEB6AAD00EF74FF /* ______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ______Tests.m; sourceTree = "<group>"; };
+		094336DB1FEB6AAD00EF74FF /* ______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______Tests.m"; sourceTree = "<group>"; };
 		094336DD1FEB6AAD00EF74FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094336E21FEB6AAD00EF74FF /* 网络请求框架UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "网络请求框架UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		094336E61FEB6AAD00EF74FF /* ______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ______UITests.m; sourceTree = "<group>"; };
+		094336E61FEB6AAD00EF74FF /* ______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______UITests.m"; sourceTree = "<group>"; };
 		094336E81FEB6AAD00EF74FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094336FF1FEBC17100EF74FF /* ZYRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYRequest.h; sourceTree = "<group>"; };
 		094337001FEBC17100EF74FF /* ZYRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYRequest.m; sourceTree = "<group>"; };
 		094337021FEBC17D00EF74FF /* ZYRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYRequestManager.m; sourceTree = "<group>"; };
 		094337031FEBC17D00EF74FF /* ZYRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYRequestManager.h; sourceTree = "<group>"; };
+		09B539A71FF1E90D00FF08F5 /* ZYRequestRealm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYRequestRealm.h; sourceTree = "<group>"; };
+		09B539A81FF1E90D00FF08F5 /* ZYRequestRealm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYRequestRealm.m; sourceTree = "<group>"; };
 		09D238C01FF0E65E00F72E7A /* YQDStorageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQDStorageUtils.h; sourceTree = "<group>"; };
 		09D238C11FF0E65E00F72E7A /* YQDStorageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQDStorageUtils.m; sourceTree = "<group>"; };
 		09D238C41FF0E83B00F72E7A /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
@@ -71,7 +74,7 @@
 		09F1AE191FEC9F5700119511 /* YQDHttpClinetCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQDHttpClinetCore.h; sourceTree = "<group>"; };
 		09F1AE1A1FEC9F5700119511 /* YQDHttpClinetCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQDHttpClinetCore.m; sourceTree = "<group>"; };
 		09F1AE1D1FECB9B500119511 /* ZYRequestMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYRequestMacro.h; sourceTree = "<group>"; };
-		2C68FCF94550777135B8BE43 /* Pods_______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_______.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C68FCF94550777135B8BE43 /* Pods_______.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_______.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D57784AE419F640C62ADB2 /* Pods-网络请求框架.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网络请求框架.release.xcconfig"; path = "Pods/Target Support Files/Pods-网络请求框架/Pods-网络请求框架.release.xcconfig"; sourceTree = "<group>"; };
 		804E154617E811741B154B47 /* Pods-网络请求框架.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网络请求框架.debug.xcconfig"; path = "Pods/Target Support Files/Pods-网络请求框架/Pods-网络请求框架.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,6 +175,8 @@
 				094337021FEBC17D00EF74FF /* ZYRequestManager.m */,
 				09D238C71FF0E91E00F72E7A /* ZYRequestCache.h */,
 				09D238C81FF0E91E00F72E7A /* ZYRequestCache.m */,
+				09B539A71FF1E90D00FF08F5 /* ZYRequestRealm.h */,
+				09B539A81FF1E90D00FF08F5 /* ZYRequestRealm.m */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -396,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B539A91FF1E90D00FF08F5 /* ZYRequestRealm.m in Sources */,
 				09D238C91FF0E91E00F72E7A /* ZYRequestCache.m in Sources */,
 				094336C71FEB6AAD00EF74FF /* ViewController.m in Sources */,
 				094336D21FEB6AAD00EF74FF /* main.m in Sources */,
