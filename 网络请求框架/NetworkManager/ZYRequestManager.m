@@ -27,6 +27,9 @@
 //requestQueue队列是否正在轮询
 @property (nonatomic, assign) BOOL isRetaining;
 
+//定时器，每隔60s查询一次realm数据库里面的request
+//如果存在request，并且kIsConnectingNetwork为true的情况下，将这些request重新装入队列发送
+@property (nonatomic, strong) NSTimer *timer;
 @end
 
 static id _instance = nil;
@@ -54,11 +57,12 @@ static const int _maxCurrentNum = 4;
     {
         self.semaphore = dispatch_semaphore_create(_maxCurrentNum);
         self.isRetaining = false;
+        [self startTimer];
     }
     return self;
 }
 
-
+//暴露给外界
 - (void)sendRequest:(ZYRequest *)request successBlock:(SuccessBlock)successBlock failureBlock:(FailedBlock)failedBlock
 {
     //如果是ZYRequestReliabilityStoreToDB类型
@@ -66,8 +70,6 @@ static const int _maxCurrentNum = 4;
     //不成功再出发某机制从数据库中取出重新发送
     if (request.reliability == ZYRequestReliabilityStoreToDB)
     {
-        request.successBlockData = [[successBlock copy] dataUsingEncoding:NSUTF8StringEncoding];
-        request.failureBlockData = [[failedBlock copy] dataUsingEncoding:NSUTF8StringEncoding];
         [[ZYRequestRealm sharedInstance] addOrUpdateObj:request];
     }
     [self queueAddRequest:request successBlock:successBlock failureBlock:failedBlock];
@@ -160,6 +162,8 @@ static const int _maxCurrentNum = 4;
         return;
     }
     
+    if ([self.requestQueue containsObject:request]) return;
+    
     NSLog(@"++++++++++++++[%d]", request.requestId);
     
     [self.requestQueue addObject:request];
@@ -189,6 +193,33 @@ static const int _maxCurrentNum = 4;
         [self.requestQueue removeObjectAtIndex:0];
         [self.successQueue removeObjectAtIndex:0];
         [self.failureQueue removeObjectAtIndex:0];
+    }
+}
+
+#pragma mark - Timer
+- (void)startTimer
+{
+    [self.timer invalidate];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(updateTimer) userInfo:nil repeats:true];
+    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
+}
+
+- (void)updateTimer
+{
+    if (!kIsConnectingNetwork)
+    {
+        return;
+    }
+    
+    NSArray *requestArr = [[ZYRequestRealm sharedInstance] queryAllObjsForClass:[ZYRequest class]];
+    
+    if (requestArr != nil && requestArr.count > 0)
+    {
+        //需要注意的是，存入数据库里面的request是不需要回调的
+        //必定成功，当然如果需要更新时间戳的话，可以重新拼接参数的时间戳
+        [requestArr enumerateObjectsUsingBlock:^(ZYRequest *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [self queueAddRequest:obj successBlock:nil failureBlock:nil];
+        }];
     }
 }
 
@@ -228,4 +259,5 @@ static const int _maxCurrentNum = 4;
     }
     return _taskQueue;
 }
+
 @end

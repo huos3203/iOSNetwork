@@ -18,6 +18,9 @@ typedef NS_ENUM(NSInteger, ZYRequestReliability){
     ZYRequestReliabilityRetry,
     
     //必须要成功的请求，如果不成功就存入DB，然后在网络好的情况下继续发送，类似微信朋友圈
+    //需要注意的是，这类请求不需要回调的
+    //类似于发微博成功与否，发朋友圈成功与否
+    //就是必定成功的请求，只需要在有网的状态下，必定成功
     ZYRequestReliabilityStoreToDB,
     
     //普通请求，成不成功不影响业务，不需要重新发送
@@ -69,14 +72,6 @@ typedef NS_ENUM(NSInteger, ZYRequestReliability){
  */
 @property (nonatomic, copy, readonly) NSString *paramStr;
 
-
-
-/**
- 如果这个request是ZYRequestReliabilityStoreToDB类型
- 相应的把callback的两个block也是需要存入数据库
- */
-@property (nonatomic, strong) NSData *successBlockData;
-@property (nonatomic, strong) NSData *failureBlockData;
 
 - (void)reduceRetryCount;
 @end

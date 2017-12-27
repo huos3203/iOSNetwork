@@ -28,8 +28,8 @@
         request.urlStr = @"http://qf.56.com/pay/v4/giftList.ios";
         request.params = @{@"type": @0, @"page": @1, @"rows": @150};
         request.requestId = i;
-        
         request.cacheKey = [NSString stringWithFormat:@"cache%d", i];
+        request.reliability = ZYRequestReliabilityStoreToDB;
         
         
         CGFloat duration = 0;

@@ -58,6 +58,15 @@
     if (self.retryCount < 0) self.retryCount = 0;
 }
 
+- (BOOL)isEqual:(ZYRequest *)object
+{
+    if (object == nil) return false;
+    
+    if (object.requestId == self.requestId || object == self) return true;
+    
+    return false;
+}
+
 #pragma mark - realm的相关处理
 
 + (NSString *)primaryKey
