@@ -99,13 +99,11 @@ static id _instance = nil;
     [self.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         switch (status) {
             case AFNetworkReachabilityStatusNotReachable: {
-                kIsConnectingNetwork = false;
                 NSLog(@"无网络");
                 break;
             }
                 
             default:
-                kIsConnectingNetwork = true;
                 NSLog(@"有网络");
                 break;
         }
@@ -199,7 +197,10 @@ static id _instance = nil;
         failure(error);
         
     }];
-    
-    
+}
+
+- (BOOL)isConnectingNetwork
+{
+    return [AFNetworkReachabilityManager manager].reachable;
 }
 @end

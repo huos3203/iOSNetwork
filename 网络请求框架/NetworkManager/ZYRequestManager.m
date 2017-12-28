@@ -12,7 +12,9 @@
 #import "ZYRequestCache.h"
 #import "ZYRequestRealm.h"
 
+
 @interface ZYRequestManager()
+
 @property (nonatomic, strong) NSMutableArray *requestQueue;
 //存放request的成功回调
 @property (nonatomic, strong) NSMutableArray *successQueue;
@@ -37,6 +39,7 @@
 
 static id _instance = nil;
 
+
 //最大并发数
 static const int _maxCurrentNum = 4;
 
@@ -60,7 +63,7 @@ static const int _maxCurrentNum = 4;
     {
         self.semaphore = dispatch_semaphore_create(_maxCurrentNum);
         self.isRetaining = false;
-//        [self startTimer];
+        [self startTimer];
     }
     return self;
 }
@@ -212,11 +215,6 @@ static const int _maxCurrentNum = 4;
 
 - (void)updateTimer
 {
-    if (!kIsConnectingNetwork)
-    {
-        return;
-    }
-    
     NSArray *requestArr = [[ZYRequestRealm sharedInstance] queryAllObjsForClass:[ZYRequest class]];
     
     if (requestArr != nil && requestArr.count > 0)
@@ -224,9 +222,11 @@ static const int _maxCurrentNum = 4;
         //需要注意的是，存入数据库里面的request是不需要回调的
         //必定成功，当然如果需要更新时间戳的话，可以重新拼接参数的时间戳
         [requestArr enumerateObjectsUsingBlock:^(ZYRequest *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            [self queueAddRequest:obj successBlock:nil failureBlock:nil];
+            [self queueAddRequest:[obj copy] successBlock:nil failureBlock:nil];
         }];
+        [self dealRequestQueue];
     }
+    
 }
 
 #pragma mark - getter && setter
