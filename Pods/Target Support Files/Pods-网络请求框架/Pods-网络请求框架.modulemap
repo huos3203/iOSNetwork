@@ -1,6 +1,0 @@
-framework module Pods_______ {
-  umbrella header "Pods-网络请求框架-umbrella.h"
-
-  export *
-  module * { export * }
-}
