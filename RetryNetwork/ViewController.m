@@ -30,7 +30,7 @@
         request.params = @{@"type": @0, @"page": @1, @"rows": @150};
         request.requestId = i;
         request.cacheKey = [NSString stringWithFormat:@"cache%d", i];
-        request.reliability = ZYRequestReliabilityStoreToDB;
+//        request.reliability = ZYRequestReliabilityStoreToDB;
 
 
         CGFloat duration = 0;
