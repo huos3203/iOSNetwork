@@ -205,7 +205,7 @@ static const int _maxCurrentNum = 4;
 - (void)startTimer
 {
     [self.timer invalidate];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(updateTimer) userInfo:nil repeats:true];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:kTimerDuration target:self selector:@selector(updateTimer) userInfo:nil repeats:true];
     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
 }
 

@@ -16,5 +16,7 @@ typedef NS_ENUM(NSInteger, YQDRequestType) {
     YQDRequestTypePut
 };
 
+//定时器每隔60s查询一次数据库
+#define kTimerDuration 60
 
 #endif /* ZYRequestMacro_h */
