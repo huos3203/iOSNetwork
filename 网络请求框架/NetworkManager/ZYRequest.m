@@ -29,6 +29,21 @@
     return self;
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    ZYRequest *request = [[[self class] allocWithZone:zone] init];
+    request.retryCount = self.retryCount;
+    request.reliability = self.reliability;
+    request.method = self.method;
+    request.cacheKey = self.cacheKey;
+    request.requestId = self.requestId;
+    request.params = self.params;
+    request.urlStr = self.urlStr;
+    request.paramStr = self.paramStr;
+    
+    return request;
+}
+
 - (void)setReliability:(ZYRequestReliability)reliability
 {
     _reliability = reliability;
@@ -44,6 +59,8 @@
 - (void)setParams:(NSDictionary *)params
 {
     _params = params;
+    
+    if (!params) return;
     
     if (_reliability == ZYRequestReliabilityStoreToDB)
     {

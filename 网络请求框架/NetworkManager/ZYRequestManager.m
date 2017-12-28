@@ -24,6 +24,9 @@
 //这个串行队列用来控制任务有序的执行
 @property (nonatomic, strong) dispatch_queue_t taskQueue;
 
+//添加、删除队列，维护添加与删除request在同一个线程
+@property (nonatomic, strong) dispatch_queue_t addDelQueue;
+
 //requestQueue队列是否正在轮询
 @property (nonatomic, assign) BOOL isRetaining;
 
@@ -57,7 +60,7 @@ static const int _maxCurrentNum = 4;
     {
         self.semaphore = dispatch_semaphore_create(_maxCurrentNum);
         self.isRetaining = false;
-        [self startTimer];
+//        [self startTimer];
     }
     return self;
 }
@@ -70,8 +73,9 @@ static const int _maxCurrentNum = 4;
     //不成功再出发某机制从数据库中取出重新发送
     if (request.reliability == ZYRequestReliabilityStoreToDB)
     {
-        [[ZYRequestRealm sharedInstance] addOrUpdateObj:request];
+        [[ZYRequestCache sharedInstance] saveRequestToRealm:request];
     }
+    
     [self queueAddRequest:request successBlock:successBlock failureBlock:failedBlock];
     [self dealRequestQueue];
 }
@@ -91,15 +95,14 @@ static const int _maxCurrentNum = 4;
             SuccessBlock successBlock = self.successQueue.firstObject;
             FailedBlock failedBlock = self.failureQueue.firstObject;
             
-            NSLog(@"---------------[%d]", request.requestId);
-            dispatch_async(dispatch_get_main_queue(), ^{
+            
+            dispatch_sync(self.addDelQueue, ^{
                 [self queueRemoveFirstObj];
             });
             dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
-            
+            NSLog(@"ppppppp  %d", request.requestId);
             //利用AFN发送请求
             [[YQDHttpClinetCore sharedClient] requestWithPath:request.urlStr method:request.method parameters:request.params prepareExecute:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-                
                 dispatch_semaphore_signal(self.semaphore);
                 
 //                NSLog(@"++++++++%d", request.requestId);
@@ -118,7 +121,8 @@ static const int _maxCurrentNum = 4;
                 //在成功的时候移除realm数据库中的缓存
                 if (request.reliability == ZYRequestReliabilityStoreToDB)
                 {
-                    [[ZYRequestRealm sharedInstance] deleteObj:request];
+                    NSLog(@"xxxxxxxxxx   %d", request.requestId);
+                    [[ZYRequestCache sharedInstance] deleteRequestFromRealmWithRequestId:request.requestId];
                 }
                 
                 successBlock(responseObject);
@@ -162,27 +166,29 @@ static const int _maxCurrentNum = 4;
         return;
     }
     
-    if ([self.requestQueue containsObject:request]) return;
     
-    NSLog(@"++++++++++++++[%d]", request.requestId);
-    
-    [self.requestQueue addObject:request];
-    //做容错处理，如果block为空，设置默认block
-    id tmpBlock = [successBlock copy];
-    if (successBlock == nil)
-    {
-        tmpBlock = [^(id obj){} copy];
-    }
-    [self.successQueue addObject:tmpBlock];
-    
-    
-    tmpBlock = [failedBlock copy];
-    if (failedBlock == nil)
-    {
-        tmpBlock = [^(id obj){} copy];
-    }
-    [self.failureQueue addObject:tmpBlock];
-    
+    dispatch_sync(self.addDelQueue, ^{
+        
+        if ([self.requestQueue containsObject:request]) return;
+        NSLog(@"++++++++++++++[%d]", request.requestId);
+        
+        [self.requestQueue addObject:request];
+        //做容错处理，如果block为空，设置默认block
+        id tmpBlock = [successBlock copy];
+        if (successBlock == nil)
+        {
+            tmpBlock = [^(id obj){} copy];
+        }
+        [self.successQueue addObject:tmpBlock];
+        
+        
+        tmpBlock = [failedBlock copy];
+        if (failedBlock == nil)
+        {
+            tmpBlock = [^(id obj){} copy];
+        }
+        [self.failureQueue addObject:tmpBlock];
+    });
 }
 
 - (void)queueRemoveFirstObj
@@ -200,7 +206,7 @@ static const int _maxCurrentNum = 4;
 - (void)startTimer
 {
     [self.timer invalidate];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(updateTimer) userInfo:nil repeats:true];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(updateTimer) userInfo:nil repeats:true];
     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
 }
 
@@ -258,6 +264,15 @@ static const int _maxCurrentNum = 4;
         _taskQueue = dispatch_queue_create("com.xxxx.www", DISPATCH_QUEUE_SERIAL);
     }
     return _taskQueue;
+}
+
+- (dispatch_queue_t)addDelQueue
+{
+    if (!_addDelQueue)
+    {
+        _addDelQueue = dispatch_queue_create("com.addDel.www", DISPATCH_QUEUE_SERIAL);
+    }
+    return _addDelQueue;
 }
 
 @end

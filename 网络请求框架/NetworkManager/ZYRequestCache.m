@@ -8,6 +8,8 @@
 
 #import "ZYRequestCache.h"
 #import "YQDStorageUtils.h"
+#import "ZYRequestRealm.h"
+#import "ZYRequest.h"
 
 @interface ZYRequestCache()
 
@@ -37,6 +39,29 @@ static id _instance = nil;
 - (void)saveData:(NSData *)data ForKey:(NSString *)key
 {
     [YQDStorageUtils saveUrl:key withData:data];
+}
+
+//将request存入realm数据库
+- (void)saveRequestToRealm:(ZYRequest *)request
+{
+    [[ZYRequestRealm sharedInstance] addOrUpdateObj:[request copy]];
+}
+
+//将以requestId为主键的request从realm数据库中删除
+- (void)deleteRequestFromRealmWithRequestId:(int)requestId
+{
+    [[ZYRequestRealm sharedInstance] deleteobjsWithBlock:^{
+        RLMResults *results = [ZYRequest objectsWhere:@"requestId = %d", requestId];
+        [[ZYRequestRealm sharedInstance] deleteResultsObj:results];
+    }];
+}
+
+- (void)deleteRequestFromRealmWhere:(NSString *)predicateStr
+{
+    [[ZYRequestRealm sharedInstance] deleteobjsWithBlock:^{
+        RLMResults *results = [ZYRequest objectsWhere:predicateStr];
+        [[ZYRequestRealm sharedInstance] deleteResultsObj:results];
+    }];
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class  ZYRequest;
 @interface ZYRequestCache : NSObject
 + (instancetype)sharedInstance;
 
@@ -21,4 +22,12 @@
  */
 - (void)saveData:(NSData *)data ForKey:(NSString *)key;
 
+//将request存入realm数据库
+- (void)saveRequestToRealm:(ZYRequest *)request;
+
+//将以requestId为主键的request从realm数据库中删除
+- (void)deleteRequestFromRealmWithRequestId:(int)requestId;
+
+//将条件字符拼接在predicateStr
+- (void)deleteRequestFromRealmWhere:(NSString *)predicateStr;
 @end

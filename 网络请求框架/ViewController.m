@@ -10,6 +10,7 @@
 #import "ZYRequestManager.h"
 #import "ZYRequest.h"
 #import "ZYRequestCache.h"
+#import "ZYRequestRealm.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -22,7 +23,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     ZYRequestManager *mgr = [ZYRequestManager sharedInstance];
-    for (int i = 0; i < 30; i++)
+    for (int i = 0; i < 100; i++)
     {
         ZYRequest *request = [[ZYRequest alloc] init];
         request.urlStr = @"http://qf.56.com/pay/v4/giftList.ios";
@@ -30,29 +31,28 @@
         request.requestId = i;
         request.cacheKey = [NSString stringWithFormat:@"cache%d", i];
         request.reliability = ZYRequestReliabilityStoreToDB;
-        
-        
+
+
         CGFloat duration = 0;
-        
+
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            
+
             [mgr sendRequest:request successBlock:^(id obj) {
                 NSLog(@"~~~~~~~~~~~~~[%d]", request.requestId);
             } failureBlock:nil];
-            
+
         });
     }
-    
+
     self.scrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height + 30);
-    
-    
+
+
     //根据key读取缓存
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSData *data = [[ZYRequestCache sharedInstance] readDataForKey:@"cache0"];
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSLog(@"%@", dict);
-    });
-    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        NSData *data = [[ZYRequestCache sharedInstance] readDataForKey:@"cache0"];
+//        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+//        NSLog(@"%@", dict);
+//    });
 }
 
 

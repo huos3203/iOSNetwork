@@ -8,10 +8,11 @@
 
 #import "ZYRequestRealm.h"
 #import "ZYRequest.h"
+#import <objc/runtime.h>
 
 
 @interface ZYRequestRealm()
-
+@property (nonatomic, strong) dispatch_queue_t serialQueue;
 @end
 
 static id _instance = nil;
@@ -33,7 +34,7 @@ static id _instance = nil;
 {
     if (self = [super init])
     {
-        [self createDataBaseWithName:@"requestReaml"];
+        [self createDataBaseWithName:@"requestReaml.realm"];
     }
     return self;
 }
@@ -78,9 +79,10 @@ static id _instance = nil;
     
     [self transactionOperation:^{
         RLMRealm *realm = [RLMRealm defaultRealm];
-        [realm transactionWithBlock:^{
-            [realm addOrUpdateObject:obj];
-        }];
+        [realm beginWriteTransaction];
+        [realm addOrUpdateObject:obj];
+        [realm commitWriteTransaction];
+        
     }];
     
 }
@@ -88,9 +90,16 @@ static id _instance = nil;
 {
     [self transactionOperation:^{
         RLMRealm *realm = [RLMRealm defaultRealm];
-        [realm transactionWithBlock:^{
-            [realm addOrUpdateObjects:objArr];
-        }];
+        [realm beginWriteTransaction];
+        [realm  addOrUpdateObjects:objArr];
+        [realm commitWriteTransaction];
+    }];
+}
+
+- (void)deleteobjsWithBlock:(void(^)(void))block
+{
+    [self transactionOperation:^{
+        block();
     }];
 }
 
@@ -100,18 +109,19 @@ static id _instance = nil;
     
     [self transactionOperation:^{
         RLMRealm *realm = [RLMRealm defaultRealm];
-        [realm transactionWithBlock:^{
-            [realm deleteObject:obj];
-        }];
+        [realm beginWriteTransaction];
+        [realm deleteObject:obj];
+        [realm commitWriteTransaction];
     }];
 }
 - (void)deleteObjArray:(NSArray<RLMObject *> *)objArr
 {
     [self transactionOperation:^{
         RLMRealm *realm = [RLMRealm defaultRealm];
-        [realm transactionWithBlock:^{
-            [realm deleteObjects:objArr];
-        }];
+        [realm beginWriteTransaction];
+        [realm deleteObjects:objArr];
+        [realm commitWriteTransaction];
+       
     }];
 }
 //删除RLMResults对象
@@ -119,22 +129,15 @@ static id _instance = nil;
 {
     [self transactionOperation:^{
         RLMRealm *realm = [RLMRealm defaultRealm];
-        NSError *error = nil;
-        [realm transactionWithBlock:^{
-            [realm deleteObjects:results];
-        } error:&error];
-        
-        if (error)
-        {
-            NSLog(@"realm错误信息： %@", error);
-        }
-        
+        [realm beginWriteTransaction];
+        [realm deleteObjects:results];
+        [realm commitWriteTransaction];
     }];
 }
 
 - (void)transactionOperation:(void(^)(void))operationBlock
 {
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+    dispatch_async(self.serialQueue, ^{
         operationBlock();
     });
 }
@@ -143,9 +146,17 @@ static id _instance = nil;
 {
     //使用SEL来调用方法，首先做容错处理
     //如果class不是RLMObject的子类，是肯定不符合调用规则的
-    if (![class isKindOfClass:[RLMObject class]]) return nil;
+    
     SEL selector = @selector(allObjects);
-    RLMResults *results = [class performSelector:selector];
+    RLMResults *results = nil;
+    
+    @try{
+        results = [class performSelector:selector];
+        
+    }@catch (NSException *exception) {
+        NSLog(@"Error: +queryAllObjsForClass方法中的class并不是继承自RLMObject");
+        return nil;
+    }
     
     NSMutableArray *tmpArr = [NSMutableArray array];
     
@@ -156,5 +167,13 @@ static id _instance = nil;
     return tmpArr;
 }
 
+- (dispatch_queue_t)serialQueue
+{
+    if (!_serialQueue)
+    {
+        _serialQueue = dispatch_queue_create("com.requestRealm.www", DISPATCH_QUEUE_SERIAL);
+    }
+    return _serialQueue;
+}
 
 @end

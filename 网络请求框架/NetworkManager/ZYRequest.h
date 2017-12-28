@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, ZYRequestReliability){
 };
 
 
-@interface ZYRequest : RLMObject
+@interface ZYRequest : RLMObject<NSCopying>
 
 //存入数据库的唯一标示
 @property (nonatomic, assign) int requestId;
