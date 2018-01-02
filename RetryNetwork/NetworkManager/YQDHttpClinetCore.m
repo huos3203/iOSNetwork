@@ -93,7 +93,7 @@ static id _instance = nil;
 
 #pragma mark - 调用AFN方法
 
-- (void)startMonitoringNetwork;
+- (void)startMonitoringNetwork
 {
     self.reachabilityManager = [AFNetworkReachabilityManager manager];
     [self.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
