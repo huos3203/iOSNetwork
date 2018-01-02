@@ -13,7 +13,6 @@
 #import "ZYRequestRealm.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
 
 @implementation ViewController
@@ -44,7 +43,6 @@
         });
     }
 
-    self.scrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height + 30);
 
 
     //根据key读取缓存
