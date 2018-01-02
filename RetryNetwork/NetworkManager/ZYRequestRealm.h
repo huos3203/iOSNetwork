@@ -13,7 +13,7 @@
 //  在主线程查询出来的数据，只能在主线程中使用realm去删除，如果想要在子线程中修改，那么请在子线程中查询，关于删除的正确调用
 //  在ZYRequestCache有正确的实现，主要目的，还是避免在不同线程让realm数据库操作同一份数据
 
-//  如果一定要在主线程调用，那么可以将ZYRequestRealm.m文件中的serialQueue属性改为主队列，就不会发生上面的错误了
+//  如果一定要在主线程调用，那么可以将ZYRequestRealm.m文件中的serialQueue属性改为主队列，就不会发生上面的错误了，但是如果在其他线程操作了没有进行copy的数据，会造成崩溃
 #import <Foundation/Foundation.h>
 #import <Realm/Realm.h>
 
@@ -29,7 +29,7 @@
 
 //删除对象
 /**
- 需要注意的是，所以的添加、删除操作，我都是放在子线程中a的
+ 需要注意的是，所有的添加、删除操作，我都是放在子线程中a的
  那么按照realm文档，如果要删除一个查询出来的对象，该对象也必须在子线程a中被查询出来
  */
 - (void)deleteobjsWithBlock:(void(^)(void))block;

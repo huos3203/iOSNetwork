@@ -166,7 +166,6 @@ static const int _maxCurrentNum = 4;
         return;
     }
     
-    
     dispatch_sync(self.addDelQueue, ^{
         
         if ([self.requestQueue containsObject:request]) return;
