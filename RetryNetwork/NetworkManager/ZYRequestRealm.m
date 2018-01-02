@@ -142,7 +142,7 @@ static id _instance = nil;
     });
 }
 
-- (NSArray<RLMObject *> *)queryAllObjsForClass:(Class)class;
+- (NSArray<RLMObject *> *)queryAllObjsForClass:(Class)cls;
 {
     //使用SEL来调用方法，首先做容错处理
     //如果class不是RLMObject的子类，是肯定不符合调用规则的
@@ -151,7 +151,7 @@ static id _instance = nil;
     RLMResults *results = nil;
     
     @try{
-        results = [class performSelector:selector];
+        results = [cls performSelector:selector];
         
     }@catch (NSException *exception) {
         NSLog(@"Error: +queryAllObjsForClass方法中的class并不是继承自RLMObject");

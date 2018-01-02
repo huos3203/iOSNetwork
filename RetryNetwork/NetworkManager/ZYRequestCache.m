@@ -64,4 +64,9 @@ static id _instance = nil;
     }];
 }
 
+- (NSArray *)allRequestsFromRealmWihtClass:(Class)cls
+{
+    return [[ZYRequestRealm sharedInstance] queryAllObjsForClass:cls];
+}
+
 @end

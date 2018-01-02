@@ -43,6 +43,6 @@
 - (void)deleteResultsObj:(RLMResults *)results;
 
 //查询所有数据
-- (NSArray<RLMObject *> *)queryAllObjsForClass:(Class)class;
+- (NSArray<RLMObject *> *)queryAllObjsForClass:(Class)cls;
 
 @end

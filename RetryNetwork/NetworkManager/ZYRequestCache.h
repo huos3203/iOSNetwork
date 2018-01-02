@@ -30,4 +30,7 @@
 
 //将条件字符拼接在predicateStr
 - (void)deleteRequestFromRealmWhere:(NSString *)predicateStr;
+
+//realm数据库里面所有request请求
+- (NSArray *)allRequestsFromRealmWihtClass:(Class)cls;
 @end

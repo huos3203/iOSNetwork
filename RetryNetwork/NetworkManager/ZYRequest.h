@@ -17,9 +17,9 @@ typedef NS_ENUM(NSInteger, ZYRequestReliability){
     //如果没有发送成功，就放入调度队列再次发送
     ZYRequestReliabilityRetry,
     
-    //必须要成功的请求，如果不成功就存入DB，然后在网络好的情况下继续发送，类似微信朋友圈
+    //必须要成功的请求，如果不成功就存入DB，然后在网络好的情况下继续发送，类似微信发消息
     //需要注意的是，这类请求不需要回调的
-    //类似于发微博成功与否，发朋友圈成功与否
+    //类似于发微信成功与否
     //就是必定成功的请求，只需要在有网的状态下，必定成功
     ZYRequestReliabilityStoreToDB,
     

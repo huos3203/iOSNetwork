@@ -10,7 +10,6 @@
 #import "ZYRequest.h"
 #import "YQDHttpClinetCore.h"
 #import "ZYRequestCache.h"
-#import "ZYRequestRealm.h"
 
 
 @interface ZYRequestManager()
@@ -210,7 +209,7 @@ static const int _maxCurrentNum = 4;
 
 - (void)updateTimer
 {
-    NSArray *requestArr = [[ZYRequestRealm sharedInstance] queryAllObjsForClass:[ZYRequest class]];
+    NSArray *requestArr = [[ZYRequestCache sharedInstance] allRequestsFromRealmWihtClass:[ZYRequest class]];
     
     if (requestArr != nil && requestArr.count > 0)
     {
