@@ -1,0 +1,84 @@
+@startuml
+
+title 熟悉弱网环境下保证请求成功的方法 
+center header
+1. 了解请求记录的重发机制
+2. 学习realm使用方法
+endheader
+
+class ZYRequest{
+int reqeustId;
+__ 函数组名 __
+- reduceRetryCount;
+}
+class ZYRequestCache{
+    --沙盒--
+    - readDataForKey
+    - saveData:ForKey:
+    --保存--
+    - saveRequestToRealm:
+    --删除操作--
+    - deleteRequestFromRealmWithRequestId:
+    - deleteRequestFromRealmWithWhere:
+    --查询--
+    - allRequestsFromRealmWithClass:
+}
+class ZYRequestManager{
+    + shareInstance
+    - sendRequest:successBlock:failureBlock:
+
+}
+class ZYRequestRealm{
+    + shareInstance
+    --添加or更新对象--
+    - addOrUpdateObj:
+    - addOrUpdateObjArray:
+--删除对象--
+-deleteobjsWithBlock:
+-deleteObj:
+-deleteObjArray:
+--删除RLMResults对象--
+-deleteResultsObj:
+--查询所有数据--
+-queryAllObjsForClass:
+}
+
+'###### 类备注模块 类声明末尾使用:note 位置: 备注#########'
+note left of ZYRequest 
+    ZYRequest类用来处理公共的逻辑，所有发送一次请求所需要的数据，例如url\params\method\type等
+    控制请求的是否暂存,重发几次的属性控制
+end note
+
+'&&&&&& 类组合模块 类模块 &&&&&&&'
+package Storage{
+class YQDStorageUtils{
+}
+}
+note right of ZYRequestRealm
+    所有的关于数据库的操作,数据库采用的是realm数据库
+   并且实现了在子线程进行数据的存取，不占用主线程的资源，以免造成卡顿。
+end note
+note right of ZYRequestManager
+进行request调度的主题逻辑，只是一个先入先出队列来进行调用
+end note 
+
+note right of Storage
+    处理将NSData数据缓存到沙盒的,
+    从沙盒取出数据、从数据库取出数据，删除、查询等等所有操作
+end note
+ZYRequest ..|> ZYRequestCache:参数
+ZYRequestCache ..|> Storage:调用关系
+ZYRequestManager .. ZYRequestRealm
+note left on link  
+    暂存过程
+end note
+
+
+
+
+
+
+center footer
+熟悉流程
+endfooter
+@enduml

@@ -76,6 +76,7 @@
 		09F1AE1D1FECB9B500119511 /* ZYRequestMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYRequestMacro.h; sourceTree = "<group>"; };
 		39D57784AE419F640C62ADB2 /* Pods-RetryNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetryNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		804E154617E811741B154B47 /* Pods-RetryNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetryNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		84FD8B3C2283E8DD00BC2BE6 /* RetryNet.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RetryNet.md; sourceTree = "<group>"; };
 		DA87B257718407796A54DF7B /* Pods_RetryNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetryNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,6 +141,7 @@
 				094336CD1FEB6AAD00EF74FF /* LaunchScreen.storyboard */,
 				094336D01FEB6AAD00EF74FF /* Info.plist */,
 				094336D11FEB6AAD00EF74FF /* main.m */,
+				84FD8B3C2283E8DD00BC2BE6 /* RetryNet.md */,
 			);
 			path = RetryNetwork;
 			sourceTree = "<group>";
