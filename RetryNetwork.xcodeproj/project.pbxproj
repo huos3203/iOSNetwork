@@ -22,6 +22,44 @@
 		09D238C61FF0E83B00F72E7A /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D238C51FF0E83B00F72E7A /* NSString+MD5.m */; };
 		09D238C91FF0E91E00F72E7A /* ZYRequestCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D238C81FF0E91E00F72E7A /* ZYRequestCache.m */; };
 		09F1AE1B1FEC9F5700119511 /* YQDHttpClinetCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F1AE1A1FEC9F5700119511 /* YQDHttpClinetCore.m */; };
+		84CAEAD622DC84D50002822D /* iTBoyer_util_tryNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CAEACD22DC84D50002822D /* iTBoyer_util_tryNetwork.framework */; };
+		84CAEADD22DC84D50002822D /* iTBoyer_util_tryNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEADC22DC84D50002822D /* iTBoyer_util_tryNetworkTests.m */; };
+		84CAEADF22DC84D50002822D /* iTBoyer_util_tryNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEACF22DC84D50002822D /* iTBoyer_util_tryNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84CAEAE222DC84D50002822D /* iTBoyer_util_tryNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CAEACD22DC84D50002822D /* iTBoyer_util_tryNetwork.framework */; };
+		84CAEAE322DC84D50002822D /* iTBoyer_util_tryNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84CAEACD22DC84D50002822D /* iTBoyer_util_tryNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84CAEB1322DC84F40002822D /* RetryDBManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAEB22DC84F30002822D /* RetryDBManager.h */; };
+		84CAEB1422DC84F40002822D /* SuRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAEC22DC84F30002822D /* SuRequestManager.h */; };
+		84CAEB1522DC84F40002822D /* SuRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAED22DC84F30002822D /* SuRequestManager.m */; };
+		84CAEB1622DC84F40002822D /* SuRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAEE22DC84F30002822D /* SuRequest.m */; };
+		84CAEB1722DC84F40002822D /* SuRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAEF22DC84F30002822D /* SuRequest.h */; };
+		84CAEB1822DC84F40002822D /* RetryDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAF022DC84F30002822D /* RetryDBManager.m */; };
+		84CAEB1922DC84F40002822D /* class UML.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CAEAF222DC84F30002822D /* class UML.png */; };
+		84CAEB1A22DC84F40002822D /* BCORMEntityProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAF422DC84F30002822D /* BCORMEntityProtocol.h */; };
+		84CAEB1B22DC84F40002822D /* BCSqliteType.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAF622DC84F30002822D /* BCSqliteType.m */; };
+		84CAEB1C22DC84F40002822D /* BCSqlInt.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAF722DC84F30002822D /* BCSqlInt.m */; };
+		84CAEB1D22DC84F40002822D /* BCSqlReal.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAF822DC84F30002822D /* BCSqlReal.m */; };
+		84CAEB1E22DC84F40002822D /* BCSqlText.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAF922DC84F30002822D /* BCSqlText.m */; };
+		84CAEB1F22DC84F40002822D /* BCSqliteType.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAFA22DC84F30002822D /* BCSqliteType.h */; };
+		84CAEB2022DC84F40002822D /* BCSqlReal.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAFB22DC84F30002822D /* BCSqlReal.h */; };
+		84CAEB2122DC84F40002822D /* BCSqlInt.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAFC22DC84F30002822D /* BCSqlInt.h */; };
+		84CAEB2222DC84F40002822D /* BCSqlText.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAFD22DC84F30002822D /* BCSqlText.h */; };
+		84CAEB2322DC84F40002822D /* BCSqlParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAFE22DC84F30002822D /* BCSqlParameter.h */; };
+		84CAEB2422DC84F40002822D /* BCConstraints.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB0022DC84F30002822D /* BCConstraints.h */; };
+		84CAEB2522DC84F40002822D /* BCReferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB0122DC84F30002822D /* BCReferences.h */; };
+		84CAEB2622DC84F40002822D /* BCConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEB0222DC84F30002822D /* BCConstraints.m */; };
+		84CAEB2722DC84F40002822D /* BCReferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEB0322DC84F30002822D /* BCReferences.m */; };
+		84CAEB2822DC84F40002822D /* BCORMHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEB0422DC84F30002822D /* BCORMHelper.m */; };
+		84CAEB2922DC84F40002822D /* BCSqlParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEB0522DC84F30002822D /* BCSqlParameter.m */; };
+		84CAEB2A22DC84F40002822D /* BCDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB0622DC84F30002822D /* BCDB.h */; };
+		84CAEB2B22DC84F40002822D /* BCORMHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB0722DC84F30002822D /* BCORMHeader.h */; };
+		84CAEB2C22DC84F40002822D /* BCORMHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB0822DC84F30002822D /* BCORMHelper.h */; };
+		84CAEB2D22DC84F40002822D /* FMDatabase+InMemoryOnDiskIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB0B22DC84F30002822D /* FMDatabase+InMemoryOnDiskIO.h */; };
+		84CAEB2E22DC84F40002822D /* FMDatabase+InMemoryOnDiskIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEB0C22DC84F30002822D /* FMDatabase+InMemoryOnDiskIO.m */; };
+		84CAEB2F22DC84F40002822D /* FMDatabase+FTS3.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEB0E22DC84F30002822D /* FMDatabase+FTS3.m */; };
+		84CAEB3022DC84F40002822D /* FMTokenizers.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB0F22DC84F30002822D /* FMTokenizers.h */; };
+		84CAEB3122DC84F40002822D /* FMTokenizers.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEB1022DC84F30002822D /* FMTokenizers.m */; };
+		84CAEB3222DC84F40002822D /* FMDatabase+FTS3.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB1122DC84F30002822D /* FMDatabase+FTS3.h */; };
+		84CAEB3322DC84F40002822D /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB1222DC84F30002822D /* fts3_tokenizer.h */; };
 		B84BACDE70601B7564AEF6EB /* Pods_RetryNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA87B257718407796A54DF7B /* Pods_RetryNetwork.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +78,42 @@
 			remoteGlobalIDString = 094336BE1FEB6AAC00EF74FF;
 			remoteInfo = RetryNetwork;
 		};
+		84CAEAD722DC84D50002822D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 094336B71FEB6AAC00EF74FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84CAEACC22DC84D50002822D;
+			remoteInfo = iTBoyer.util.tryNetwork;
+		};
+		84CAEAD922DC84D50002822D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 094336B71FEB6AAC00EF74FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 094336BE1FEB6AAC00EF74FF;
+			remoteInfo = RetryNetwork;
+		};
+		84CAEAE022DC84D50002822D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 094336B71FEB6AAC00EF74FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84CAEACC22DC84D50002822D;
+			remoteInfo = iTBoyer.util.tryNetwork;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84CAEAE422DC84D50002822D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84CAEAE322DC84D50002822D /* iTBoyer_util_tryNetwork.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		094336BF1FEB6AAC00EF74FF /* RetryNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetryNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +149,47 @@
 		09F1AE1D1FECB9B500119511 /* ZYRequestMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYRequestMacro.h; sourceTree = "<group>"; };
 		39D57784AE419F640C62ADB2 /* Pods-RetryNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetryNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		804E154617E811741B154B47 /* Pods-RetryNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetryNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork.debug.xcconfig"; sourceTree = "<group>"; };
-		84FD8B3C2283E8DD00BC2BE6 /* RetryNet.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RetryNet.md; sourceTree = "<group>"; };
+		84CAEACD22DC84D50002822D /* iTBoyer_util_tryNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iTBoyer_util_tryNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CAEACF22DC84D50002822D /* iTBoyer_util_tryNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTBoyer_util_tryNetwork.h; sourceTree = "<group>"; };
+		84CAEAD022DC84D50002822D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CAEAD522DC84D50002822D /* iTBoyer.util.tryNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTBoyer.util.tryNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CAEADC22DC84D50002822D /* iTBoyer_util_tryNetworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTBoyer_util_tryNetworkTests.m; sourceTree = "<group>"; };
+		84CAEADE22DC84D50002822D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CAEAEB22DC84F30002822D /* RetryDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetryDBManager.h; sourceTree = "<group>"; };
+		84CAEAEC22DC84F30002822D /* SuRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuRequestManager.h; sourceTree = "<group>"; };
+		84CAEAED22DC84F30002822D /* SuRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuRequestManager.m; sourceTree = "<group>"; };
+		84CAEAEE22DC84F30002822D /* SuRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuRequest.m; sourceTree = "<group>"; };
+		84CAEAEF22DC84F30002822D /* SuRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuRequest.h; sourceTree = "<group>"; };
+		84CAEAF022DC84F30002822D /* RetryDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetryDBManager.m; sourceTree = "<group>"; };
+		84CAEAF222DC84F30002822D /* class UML.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "class UML.png"; sourceTree = "<group>"; };
+		84CAEAF422DC84F30002822D /* BCORMEntityProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCORMEntityProtocol.h; sourceTree = "<group>"; };
+		84CAEAF622DC84F30002822D /* BCSqliteType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSqliteType.m; sourceTree = "<group>"; };
+		84CAEAF722DC84F30002822D /* BCSqlInt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSqlInt.m; sourceTree = "<group>"; };
+		84CAEAF822DC84F30002822D /* BCSqlReal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSqlReal.m; sourceTree = "<group>"; };
+		84CAEAF922DC84F30002822D /* BCSqlText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSqlText.m; sourceTree = "<group>"; };
+		84CAEAFA22DC84F30002822D /* BCSqliteType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSqliteType.h; sourceTree = "<group>"; };
+		84CAEAFB22DC84F30002822D /* BCSqlReal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSqlReal.h; sourceTree = "<group>"; };
+		84CAEAFC22DC84F30002822D /* BCSqlInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSqlInt.h; sourceTree = "<group>"; };
+		84CAEAFD22DC84F30002822D /* BCSqlText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSqlText.h; sourceTree = "<group>"; };
+		84CAEAFE22DC84F30002822D /* BCSqlParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSqlParameter.h; sourceTree = "<group>"; };
+		84CAEB0022DC84F30002822D /* BCConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCConstraints.h; sourceTree = "<group>"; };
+		84CAEB0122DC84F30002822D /* BCReferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCReferences.h; sourceTree = "<group>"; };
+		84CAEB0222DC84F30002822D /* BCConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCConstraints.m; sourceTree = "<group>"; };
+		84CAEB0322DC84F30002822D /* BCReferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCReferences.m; sourceTree = "<group>"; };
+		84CAEB0422DC84F30002822D /* BCORMHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCORMHelper.m; sourceTree = "<group>"; };
+		84CAEB0522DC84F30002822D /* BCSqlParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSqlParameter.m; sourceTree = "<group>"; };
+		84CAEB0622DC84F30002822D /* BCDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCDB.h; sourceTree = "<group>"; };
+		84CAEB0722DC84F30002822D /* BCORMHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCORMHeader.h; sourceTree = "<group>"; };
+		84CAEB0822DC84F30002822D /* BCORMHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCORMHelper.h; sourceTree = "<group>"; };
+		84CAEB0B22DC84F30002822D /* FMDatabase+InMemoryOnDiskIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+InMemoryOnDiskIO.h"; sourceTree = "<group>"; };
+		84CAEB0C22DC84F30002822D /* FMDatabase+InMemoryOnDiskIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+InMemoryOnDiskIO.m"; sourceTree = "<group>"; };
+		84CAEB0E22DC84F30002822D /* FMDatabase+FTS3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+FTS3.m"; sourceTree = "<group>"; };
+		84CAEB0F22DC84F30002822D /* FMTokenizers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTokenizers.h; sourceTree = "<group>"; };
+		84CAEB1022DC84F30002822D /* FMTokenizers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTokenizers.m; sourceTree = "<group>"; };
+		84CAEB1122DC84F30002822D /* FMDatabase+FTS3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+FTS3.h"; sourceTree = "<group>"; };
+		84CAEB1222DC84F30002822D /* fts3_tokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fts3_tokenizer.h; sourceTree = "<group>"; };
+		84CAEB3422DC862C0002822D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		84CAEB3522DC86B40002822D /* 弱网拍照优化方案.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "弱网拍照优化方案.png"; sourceTree = "<group>"; };
 		DA87B257718407796A54DF7B /* Pods_RetryNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetryNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -85,6 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CAEAE222DC84D50002822D /* iTBoyer_util_tryNetwork.framework in Frameworks */,
 				B84BACDE70601B7564AEF6EB /* Pods_RetryNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,15 +217,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84CAEACA22DC84D50002822D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CAEAD222DC84D50002822D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CAEAD622DC84D50002822D /* iTBoyer_util_tryNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		094336B61FEB6AAC00EF74FF = {
 			isa = PBXGroup;
 			children = (
+				84CAEB3422DC862C0002822D /* README.md */,
+				84CAEB3522DC86B40002822D /* 弱网拍照优化方案.png */,
 				094336C11FEB6AAC00EF74FF /* RetryNetwork */,
 				094336DA1FEB6AAD00EF74FF /* RetryNetworkTests */,
 				094336E51FEB6AAD00EF74FF /* RetryNetworkUITests */,
+				84CAEACE22DC84D50002822D /* iTBoyer.util.tryNetwork */,
+				84CAEADB22DC84D50002822D /* iTBoyer.util.tryNetworkTests */,
 				094336C01FEB6AAC00EF74FF /* Products */,
 				3D12E0247544ED7E07ABA4D4 /* Pods */,
 				53E99B7D197E97FECC1CDA0C /* Frameworks */,
@@ -124,6 +257,8 @@
 				094336BF1FEB6AAC00EF74FF /* RetryNetwork.app */,
 				094336D71FEB6AAD00EF74FF /* RetryNetworkTests.xctest */,
 				094336E21FEB6AAD00EF74FF /* RetryNetworkUITests.xctest */,
+				84CAEACD22DC84D50002822D /* iTBoyer_util_tryNetwork.framework */,
+				84CAEAD522DC84D50002822D /* iTBoyer.util.tryNetworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,7 +276,6 @@
 				094336CD1FEB6AAD00EF74FF /* LaunchScreen.storyboard */,
 				094336D01FEB6AAD00EF74FF /* Info.plist */,
 				094336D11FEB6AAD00EF74FF /* main.m */,
-				84FD8B3C2283E8DD00BC2BE6 /* RetryNet.md */,
 			);
 			path = RetryNetwork;
 			sourceTree = "<group>";
@@ -211,7 +345,143 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		84CAEACE22DC84D50002822D /* iTBoyer.util.tryNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				84CAEAF122DC84F30002822D /* ORM */,
+				84CAEAEF22DC84F30002822D /* SuRequest.h */,
+				84CAEAEE22DC84F30002822D /* SuRequest.m */,
+				84CAEAEB22DC84F30002822D /* RetryDBManager.h */,
+				84CAEAF022DC84F30002822D /* RetryDBManager.m */,
+				84CAEAEC22DC84F30002822D /* SuRequestManager.h */,
+				84CAEAED22DC84F30002822D /* SuRequestManager.m */,
+				84CAEACF22DC84D50002822D /* iTBoyer_util_tryNetwork.h */,
+				84CAEAD022DC84D50002822D /* Info.plist */,
+			);
+			path = iTBoyer.util.tryNetwork;
+			sourceTree = "<group>";
+		};
+		84CAEADB22DC84D50002822D /* iTBoyer.util.tryNetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				84CAEADC22DC84D50002822D /* iTBoyer_util_tryNetworkTests.m */,
+				84CAEADE22DC84D50002822D /* Info.plist */,
+			);
+			path = iTBoyer.util.tryNetworkTests;
+			sourceTree = "<group>";
+		};
+		84CAEAF122DC84F30002822D /* ORM */ = {
+			isa = PBXGroup;
+			children = (
+				84CAEAF222DC84F30002822D /* class UML.png */,
+				84CAEAF322DC84F30002822D /* BCSqliteORM */,
+				84CAEB0922DC84F30002822D /* FFDB-extra */,
+			);
+			path = ORM;
+			sourceTree = "<group>";
+		};
+		84CAEAF322DC84F30002822D /* BCSqliteORM */ = {
+			isa = PBXGroup;
+			children = (
+				84CAEAF422DC84F30002822D /* BCORMEntityProtocol.h */,
+				84CAEAF522DC84F30002822D /* SqliteType */,
+				84CAEAFF22DC84F30002822D /* SqliteConstraints */,
+				84CAEB0622DC84F30002822D /* BCDB.h */,
+				84CAEB0722DC84F30002822D /* BCORMHeader.h */,
+				84CAEAFE22DC84F30002822D /* BCSqlParameter.h */,
+				84CAEB0522DC84F30002822D /* BCSqlParameter.m */,
+				84CAEB0822DC84F30002822D /* BCORMHelper.h */,
+				84CAEB0422DC84F30002822D /* BCORMHelper.m */,
+			);
+			path = BCSqliteORM;
+			sourceTree = "<group>";
+		};
+		84CAEAF522DC84F30002822D /* SqliteType */ = {
+			isa = PBXGroup;
+			children = (
+				84CAEAFC22DC84F30002822D /* BCSqlInt.h */,
+				84CAEAF722DC84F30002822D /* BCSqlInt.m */,
+				84CAEAFB22DC84F30002822D /* BCSqlReal.h */,
+				84CAEAF822DC84F30002822D /* BCSqlReal.m */,
+				84CAEAFD22DC84F30002822D /* BCSqlText.h */,
+				84CAEAF922DC84F30002822D /* BCSqlText.m */,
+				84CAEAFA22DC84F30002822D /* BCSqliteType.h */,
+				84CAEAF622DC84F30002822D /* BCSqliteType.m */,
+			);
+			path = SqliteType;
+			sourceTree = "<group>";
+		};
+		84CAEAFF22DC84F30002822D /* SqliteConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				84CAEB0022DC84F30002822D /* BCConstraints.h */,
+				84CAEB0222DC84F30002822D /* BCConstraints.m */,
+				84CAEB0122DC84F30002822D /* BCReferences.h */,
+				84CAEB0322DC84F30002822D /* BCReferences.m */,
+			);
+			path = SqliteConstraints;
+			sourceTree = "<group>";
+		};
+		84CAEB0922DC84F30002822D /* FFDB-extra */ = {
+			isa = PBXGroup;
+			children = (
+				84CAEB0A22DC84F30002822D /* InMemoryOnDiskIO */,
+				84CAEB0D22DC84F30002822D /* fts3 */,
+			);
+			path = "FFDB-extra";
+			sourceTree = "<group>";
+		};
+		84CAEB0A22DC84F30002822D /* InMemoryOnDiskIO */ = {
+			isa = PBXGroup;
+			children = (
+				84CAEB0B22DC84F30002822D /* FMDatabase+InMemoryOnDiskIO.h */,
+				84CAEB0C22DC84F30002822D /* FMDatabase+InMemoryOnDiskIO.m */,
+			);
+			path = InMemoryOnDiskIO;
+			sourceTree = "<group>";
+		};
+		84CAEB0D22DC84F30002822D /* fts3 */ = {
+			isa = PBXGroup;
+			children = (
+				84CAEB1222DC84F30002822D /* fts3_tokenizer.h */,
+				84CAEB0F22DC84F30002822D /* FMTokenizers.h */,
+				84CAEB1022DC84F30002822D /* FMTokenizers.m */,
+				84CAEB1122DC84F30002822D /* FMDatabase+FTS3.h */,
+				84CAEB0E22DC84F30002822D /* FMDatabase+FTS3.m */,
+			);
+			path = fts3;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		84CAEAC822DC84D50002822D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CAEB2A22DC84F40002822D /* BCDB.h in Headers */,
+				84CAEB2122DC84F40002822D /* BCSqlInt.h in Headers */,
+				84CAEB2022DC84F40002822D /* BCSqlReal.h in Headers */,
+				84CAEADF22DC84D50002822D /* iTBoyer_util_tryNetwork.h in Headers */,
+				84CAEB1422DC84F40002822D /* SuRequestManager.h in Headers */,
+				84CAEB1A22DC84F40002822D /* BCORMEntityProtocol.h in Headers */,
+				84CAEB2D22DC84F40002822D /* FMDatabase+InMemoryOnDiskIO.h in Headers */,
+				84CAEB2222DC84F40002822D /* BCSqlText.h in Headers */,
+				84CAEB2322DC84F40002822D /* BCSqlParameter.h in Headers */,
+				84CAEB2522DC84F40002822D /* BCReferences.h in Headers */,
+				84CAEB2B22DC84F40002822D /* BCORMHeader.h in Headers */,
+				84CAEB2422DC84F40002822D /* BCConstraints.h in Headers */,
+				84CAEB3222DC84F40002822D /* FMDatabase+FTS3.h in Headers */,
+				84CAEB3322DC84F40002822D /* fts3_tokenizer.h in Headers */,
+				84CAEB3022DC84F40002822D /* FMTokenizers.h in Headers */,
+				84CAEB1722DC84F40002822D /* SuRequest.h in Headers */,
+				84CAEB2C22DC84F40002822D /* BCORMHelper.h in Headers */,
+				84CAEB1322DC84F40002822D /* RetryDBManager.h in Headers */,
+				84CAEB1F22DC84F40002822D /* BCSqliteType.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		094336BE1FEB6AAC00EF74FF /* RetryNetwork */ = {
@@ -224,10 +494,12 @@
 				094336BD1FEB6AAC00EF74FF /* Resources */,
 				8D2A9E4FB282AD9AEE902140 /* [CP] Embed Pods Frameworks */,
 				57117EB2E397E89D4916408E /* [CP] Copy Pods Resources */,
+				84CAEAE422DC84D50002822D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				84CAEAE122DC84D50002822D /* PBXTargetDependency */,
 			);
 			name = RetryNetwork;
 			productName = RetryNetwork;
@@ -270,6 +542,43 @@
 			productReference = 094336E21FEB6AAD00EF74FF /* RetryNetworkUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		84CAEACC22DC84D50002822D /* iTBoyer.util.tryNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CAEAE922DC84D50002822D /* Build configuration list for PBXNativeTarget "iTBoyer.util.tryNetwork" */;
+			buildPhases = (
+				84CAEAC822DC84D50002822D /* Headers */,
+				84CAEAC922DC84D50002822D /* Sources */,
+				84CAEACA22DC84D50002822D /* Frameworks */,
+				84CAEACB22DC84D50002822D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iTBoyer.util.tryNetwork;
+			productName = iTBoyer.util.tryNetwork;
+			productReference = 84CAEACD22DC84D50002822D /* iTBoyer_util_tryNetwork.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		84CAEAD422DC84D50002822D /* iTBoyer.util.tryNetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CAEAEA22DC84D50002822D /* Build configuration list for PBXNativeTarget "iTBoyer.util.tryNetworkTests" */;
+			buildPhases = (
+				84CAEAD122DC84D50002822D /* Sources */,
+				84CAEAD222DC84D50002822D /* Frameworks */,
+				84CAEAD322DC84D50002822D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84CAEAD822DC84D50002822D /* PBXTargetDependency */,
+				84CAEADA22DC84D50002822D /* PBXTargetDependency */,
+			);
+			name = iTBoyer.util.tryNetworkTests;
+			productName = iTBoyer.util.tryNetworkTests;
+			productReference = 84CAEAD522DC84D50002822D /* iTBoyer.util.tryNetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -293,6 +602,15 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 094336BE1FEB6AAC00EF74FF;
 					};
+					84CAEACC22DC84D50002822D = {
+						CreatedOnToolsVersion = 11.0;
+						ProvisioningStyle = Automatic;
+					};
+					84CAEAD422DC84D50002822D = {
+						CreatedOnToolsVersion = 11.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 094336BE1FEB6AAC00EF74FF;
+					};
 				};
 			};
 			buildConfigurationList = 094336BA1FEB6AAC00EF74FF /* Build configuration list for PBXProject "RetryNetwork" */;
@@ -311,6 +629,8 @@
 				094336BE1FEB6AAC00EF74FF /* RetryNetwork */,
 				094336D61FEB6AAD00EF74FF /* RetryNetworkTests */,
 				094336E11FEB6AAD00EF74FF /* RetryNetworkUITests */,
+				84CAEACC22DC84D50002822D /* iTBoyer.util.tryNetwork */,
+				84CAEAD422DC84D50002822D /* iTBoyer.util.tryNetworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -334,6 +654,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		094336E01FEB6AAD00EF74FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CAEACB22DC84D50002822D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CAEB1922DC84F40002822D /* class UML.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CAEAD322DC84D50002822D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -432,6 +767,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84CAEAC922DC84D50002822D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CAEB1C22DC84F40002822D /* BCSqlInt.m in Sources */,
+				84CAEB1822DC84F40002822D /* RetryDBManager.m in Sources */,
+				84CAEB3122DC84F40002822D /* FMTokenizers.m in Sources */,
+				84CAEB1E22DC84F40002822D /* BCSqlText.m in Sources */,
+				84CAEB1522DC84F40002822D /* SuRequestManager.m in Sources */,
+				84CAEB1B22DC84F40002822D /* BCSqliteType.m in Sources */,
+				84CAEB1622DC84F40002822D /* SuRequest.m in Sources */,
+				84CAEB2F22DC84F40002822D /* FMDatabase+FTS3.m in Sources */,
+				84CAEB1D22DC84F40002822D /* BCSqlReal.m in Sources */,
+				84CAEB2822DC84F40002822D /* BCORMHelper.m in Sources */,
+				84CAEB2922DC84F40002822D /* BCSqlParameter.m in Sources */,
+				84CAEB2622DC84F40002822D /* BCConstraints.m in Sources */,
+				84CAEB2722DC84F40002822D /* BCReferences.m in Sources */,
+				84CAEB2E22DC84F40002822D /* FMDatabase+InMemoryOnDiskIO.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CAEAD122DC84D50002822D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CAEADD22DC84D50002822D /* iTBoyer_util_tryNetworkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -444,6 +808,21 @@
 			isa = PBXTargetDependency;
 			target = 094336BE1FEB6AAC00EF74FF /* RetryNetwork */;
 			targetProxy = 094336E31FEB6AAD00EF74FF /* PBXContainerItemProxy */;
+		};
+		84CAEAD822DC84D50002822D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84CAEACC22DC84D50002822D /* iTBoyer.util.tryNetwork */;
+			targetProxy = 84CAEAD722DC84D50002822D /* PBXContainerItemProxy */;
+		};
+		84CAEADA22DC84D50002822D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 094336BE1FEB6AAC00EF74FF /* RetryNetwork */;
+			targetProxy = 84CAEAD922DC84D50002822D /* PBXContainerItemProxy */;
+		};
+		84CAEAE122DC84D50002822D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84CAEACC22DC84D50002822D /* iTBoyer.util.tryNetwork */;
+			targetProxy = 84CAEAE022DC84D50002822D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -661,6 +1040,98 @@
 			};
 			name = Release;
 		};
+		84CAEAE522DC84D50002822D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2C4H9T5RF5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = iTBoyer.util.tryNetwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "jinher.com.iTBoyer-util-tryNetwork";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		84CAEAE622DC84D50002822D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2C4H9T5RF5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = iTBoyer.util.tryNetwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "jinher.com.iTBoyer-util-tryNetwork";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		84CAEAE722DC84D50002822D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iTBoyer.util.tryNetworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "jinher.com.iTBoyer-util-tryNetworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetryNetwork.app/RetryNetwork";
+			};
+			name = Debug;
+		};
+		84CAEAE822DC84D50002822D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iTBoyer.util.tryNetworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "jinher.com.iTBoyer-util-tryNetworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetryNetwork.app/RetryNetwork";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -696,6 +1167,24 @@
 			buildConfigurations = (
 				094336F21FEB6AAD00EF74FF /* Debug */,
 				094336F31FEB6AAD00EF74FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84CAEAE922DC84D50002822D /* Build configuration list for PBXNativeTarget "iTBoyer.util.tryNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CAEAE522DC84D50002822D /* Debug */,
+				84CAEAE622DC84D50002822D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84CAEAEA22DC84D50002822D /* Build configuration list for PBXNativeTarget "iTBoyer.util.tryNetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CAEAE722DC84D50002822D /* Debug */,
+				84CAEAE822DC84D50002822D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
