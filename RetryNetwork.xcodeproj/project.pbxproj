@@ -33,7 +33,7 @@
 		84CAEB1622DC84F40002822D /* SuRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAEE22DC84F30002822D /* SuRequest.m */; };
 		84CAEB1722DC84F40002822D /* SuRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAEF22DC84F30002822D /* SuRequest.h */; };
 		84CAEB1822DC84F40002822D /* RetryDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAF022DC84F30002822D /* RetryDBManager.m */; };
-		84CAEB1922DC84F40002822D /* class UML.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CAEAF222DC84F30002822D /* class UML.png */; };
+		84CAEB1922DC84F40002822D /* classUML.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CAEAF222DC84F30002822D /* classUML.png */; };
 		84CAEB1A22DC84F40002822D /* BCORMEntityProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAF422DC84F30002822D /* BCORMEntityProtocol.h */; };
 		84CAEB1B22DC84F40002822D /* BCSqliteType.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAF622DC84F30002822D /* BCSqliteType.m */; };
 		84CAEB1C22DC84F40002822D /* BCSqlInt.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAF722DC84F30002822D /* BCSqlInt.m */; };
@@ -161,7 +161,7 @@
 		84CAEAEE22DC84F30002822D /* SuRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuRequest.m; sourceTree = "<group>"; };
 		84CAEAEF22DC84F30002822D /* SuRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuRequest.h; sourceTree = "<group>"; };
 		84CAEAF022DC84F30002822D /* RetryDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetryDBManager.m; sourceTree = "<group>"; };
-		84CAEAF222DC84F30002822D /* class UML.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "class UML.png"; sourceTree = "<group>"; };
+		84CAEAF222DC84F30002822D /* classUML.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = classUML.png; sourceTree = "<group>"; };
 		84CAEAF422DC84F30002822D /* BCORMEntityProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCORMEntityProtocol.h; sourceTree = "<group>"; };
 		84CAEAF622DC84F30002822D /* BCSqliteType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSqliteType.m; sourceTree = "<group>"; };
 		84CAEAF722DC84F30002822D /* BCSqlInt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSqlInt.m; sourceTree = "<group>"; };
@@ -373,7 +373,7 @@
 		84CAEAF122DC84F30002822D /* ORM */ = {
 			isa = PBXGroup;
 			children = (
-				84CAEAF222DC84F30002822D /* class UML.png */,
+				84CAEAF222DC84F30002822D /* classUML.png */,
 				84CAEAF322DC84F30002822D /* BCSqliteORM */,
 				84CAEB0922DC84F30002822D /* FFDB-extra */,
 			);
@@ -664,7 +664,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84CAEB1922DC84F40002822D /* class UML.png in Resources */,
+				84CAEB1922DC84F40002822D /* classUML.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
