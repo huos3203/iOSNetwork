@@ -7,7 +7,7 @@
 
 ### 使用FFDB存储机制
 
-![](iTBoyer.util.tryNetwork/ORM/class UML.png)
+![](iTBoyer.util.tryNetwork/ORM/class\ UML.png)
 
 
 
