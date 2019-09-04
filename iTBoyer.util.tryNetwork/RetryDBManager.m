@@ -174,6 +174,7 @@
             //更新数据库
             request.canCommit = 1;
             [self updateRequesRecord:request];
+            /**
             [request.addTask.option.OptionPicsList removeAllObjects];
             NSArray *pics = [self allRecordBy:optId];
             if (pics.count > 0) {
@@ -181,6 +182,7 @@
             }else{
                 [self deleteRequestRecord:optId];
             }
+             */
         }
     }else{
         return nil;

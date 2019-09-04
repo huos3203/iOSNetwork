@@ -9,7 +9,6 @@
 #import "SuRequest.h"
 #import "SuperAddRectTask.h"
 #import "SingletonUpload.h"
-#import "SuperReqRectifServer.h"
 
 @implementation SuRequest
 

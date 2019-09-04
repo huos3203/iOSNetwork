@@ -11,8 +11,8 @@
 #import "SuRequest.h"
 #import "RetryDBManager.h"
 #import "SingletonUpload.h"
-#import "SuperReqRectifServer.h"
-#import "JHRoutingComponent.h"
+//#import "SuperReqRectifServer.h"
+//#import "JHRoutingComponent.h"
 #import "APIRequest.h"
 
 @interface SuRequestManager ()
@@ -152,6 +152,7 @@
         }
         if (isCommiting) return;
         [self.commitingArr addObject:optId];
+        /**
         [[SuperReqRectifServer shared] reqAddRectTask:task handler:^(BOOL result) {
             [self.commitingArr removeObject:optId];
             if (result) {
@@ -161,6 +162,7 @@
                 }
             }
         }];
+         **/
     }
 }
 
@@ -276,36 +278,5 @@
     }
 }
 
--(void)lanuchNewUploader:(SuperRectOptPics *)optPic
-{
-    NSString *serverUrl = @"https://testfileserver.iuoooo.com/Jinher.JAP.BaseApp.FileServer.UI/FileManage/UploadFile";
-    NSDictionary *data = @{@"uploadData":[UIImage new],
-                           @"uploadDataName":[optPic.Picture lastPathComponent],
-                           @"uploadDataPath":optPic.Picture,
-                           @"uploadDataType":@"image",
-                           @"uploadDataId":optPic.gId,
-                           };
-    [JHRoutingComponent openURL:UPLOADDATA withParameter:@{@"datasArray":data,@"serverUrlStr":serverUrl,@"isSingleReturn":[NSNumber numberWithBool:YES]} callBack:^(NSDictionary *resultDic) {
-        
-        if ([resultDic.allKeys containsObject:@"schedule"]) {
-            
-            NSLog(@"进度：%@",resultDic[@"schedule"]);
-        }
-        else if ([resultDic.allKeys containsObject:@"error"]) {
-            
-            NSLog(@"失败：%@",resultDic[@"error"]);
-            optPic.status = [NSNumber numberWithInteger:0];
-            [[RetryDBManager shared] updateUploadStatusFor:optPic];
-        }
-        else{
-            //成功
-            NSString *url = [resultDic objectForKey:@"FilePath"];
-            optPic.Picture = url;
-            optPic.status = [NSNumber numberWithInteger:2];
-            [[RetryDBManager shared] updateUploadStatusFor:optPic];
-            [self tryCommit:optPic.optId];
-        }
-    }];
-}
 
 @end

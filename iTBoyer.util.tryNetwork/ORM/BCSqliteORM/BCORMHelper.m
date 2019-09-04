@@ -7,7 +7,7 @@
 //
 
 #import "BCORMHelper.h"
-#import <JHFoundation/JHFoundation.h>
+#import <FMDB/FMDB.h>
 //#import "ORMDatabaseProtocol.h"
 #import "BCORMEntityProtocol.h"
 #import "BCSqliteType.h"
@@ -15,7 +15,7 @@
 #import "BCSqlText.h"
 #import "BCSqlReal.h"
 #import "BCSqlParameter.h"
-
+#import <CoreGraphics/CoreGraphics.h>
 #import <objc/runtime.h>
 
 @interface BCORMHelper()

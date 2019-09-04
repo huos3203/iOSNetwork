@@ -5,10 +5,7 @@
 //  Created by Andrew on 3/27/14.
 //  Copyright (c) 2014 Andrew Goodale. All rights reserved.
 //
-
-
-#import <JHFoundation/JHFoundation.h>
-
+#import <FMDB/FMDB.h>
 /**
  Names of commands that can be issued against an FTS table.
  */

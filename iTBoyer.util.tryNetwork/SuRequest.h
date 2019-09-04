@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "SuperRectOptPics.h"
 #import "BCDB.h"
 NS_ASSUME_NONNULL_BEGIN
-@class SuperRectOptPics;
 @class SuperAddRectTask;
 @interface SuRequest : NSObject <BCORMEntityProtocol>
 -(instancetype)initWithOptId:(NSString *)optId task:(SuperAddRectTask *)task;

@@ -22,6 +22,16 @@
 		09D238C61FF0E83B00F72E7A /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D238C51FF0E83B00F72E7A /* NSString+MD5.m */; };
 		09D238C91FF0E91E00F72E7A /* ZYRequestCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D238C81FF0E91E00F72E7A /* ZYRequestCache.m */; };
 		09F1AE1B1FEC9F5700119511 /* YQDHttpClinetCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F1AE1A1FEC9F5700119511 /* YQDHttpClinetCore.m */; };
+		84A75B9C231F6482009D8EF7 /* APIRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A75B9A231F6482009D8EF7 /* APIRequest.h */; };
+		84A75B9D231F6482009D8EF7 /* APIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A75B9B231F6482009D8EF7 /* APIRequest.m */; };
+		84A75BA3231F6898009D8EF7 /* SuperAddRectTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A75BA1231F6898009D8EF7 /* SuperAddRectTask.h */; };
+		84A75BA4231F6898009D8EF7 /* SuperAddRectTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A75BA2231F6898009D8EF7 /* SuperAddRectTask.m */; };
+		84A75BAB231F68DE009D8EF7 /* SingletonUpload.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A75BA7231F68DE009D8EF7 /* SingletonUpload.h */; };
+		84A75BAC231F68DE009D8EF7 /* SingletonUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A75BA8231F68DE009D8EF7 /* SingletonUpload.m */; };
+		84A75BAD231F68DE009D8EF7 /* JHFileUpload.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A75BA9231F68DE009D8EF7 /* JHFileUpload.h */; };
+		84A75BB0231F6967009D8EF7 /* SuperRectOptPics.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A75BAE231F6967009D8EF7 /* SuperRectOptPics.h */; };
+		84A75BB1231F6967009D8EF7 /* SuperRectOptPics.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A75BAF231F6967009D8EF7 /* SuperRectOptPics.m */; };
+		84A75BB3231F6DB3009D8EF7 /* FMDatabase+FTS3.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEB0E22DC84F30002822D /* FMDatabase+FTS3.m */; };
 		84CAEAD622DC84D50002822D /* iTBoyer_util_tryNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CAEACD22DC84D50002822D /* iTBoyer_util_tryNetwork.framework */; };
 		84CAEADD22DC84D50002822D /* iTBoyer_util_tryNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEADC22DC84D50002822D /* iTBoyer_util_tryNetworkTests.m */; };
 		84CAEADF22DC84D50002822D /* iTBoyer_util_tryNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEACF22DC84D50002822D /* iTBoyer_util_tryNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,6 +71,7 @@
 		84CAEB3222DC84F40002822D /* FMDatabase+FTS3.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB1122DC84F30002822D /* FMDatabase+FTS3.h */; };
 		84CAEB3322DC84F40002822D /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB1222DC84F30002822D /* fts3_tokenizer.h */; };
 		B84BACDE70601B7564AEF6EB /* Pods_RetryNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA87B257718407796A54DF7B /* Pods_RetryNetwork.framework */; };
+		D852B983724827873802F592 /* Pods_iTBoyer_util_tryNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91633865DCBD8BFA28D02FB /* Pods_iTBoyer_util_tryNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +127,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		016F43D8D39852D0326F7B5E /* Pods-iTBoyer.util.tryNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTBoyer.util.tryNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTBoyer.util.tryNetwork/Pods-iTBoyer.util.tryNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		094336BF1FEB6AAC00EF74FF /* RetryNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetryNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		094336C21FEB6AAC00EF74FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		094336C31FEB6AAC00EF74FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -148,7 +160,18 @@
 		09F1AE1A1FEC9F5700119511 /* YQDHttpClinetCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQDHttpClinetCore.m; sourceTree = "<group>"; };
 		09F1AE1D1FECB9B500119511 /* ZYRequestMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYRequestMacro.h; sourceTree = "<group>"; };
 		39D57784AE419F640C62ADB2 /* Pods-RetryNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetryNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork.release.xcconfig"; sourceTree = "<group>"; };
+		44753B145BBF8DD41B168307 /* Pods-iTBoyer.util.tryNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTBoyer.util.tryNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTBoyer.util.tryNetwork/Pods-iTBoyer.util.tryNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		804E154617E811741B154B47 /* Pods-RetryNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetryNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		84A75B9A231F6482009D8EF7 /* APIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIRequest.h; sourceTree = "<group>"; };
+		84A75B9B231F6482009D8EF7 /* APIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIRequest.m; sourceTree = "<group>"; };
+		84A75BA1231F6898009D8EF7 /* SuperAddRectTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperAddRectTask.h; sourceTree = "<group>"; };
+		84A75BA2231F6898009D8EF7 /* SuperAddRectTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperAddRectTask.m; sourceTree = "<group>"; };
+		84A75BA6231F68DE009D8EF7 /* JHFileUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHFileUpload.m; sourceTree = "<group>"; };
+		84A75BA7231F68DE009D8EF7 /* SingletonUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonUpload.h; sourceTree = "<group>"; };
+		84A75BA8231F68DE009D8EF7 /* SingletonUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonUpload.m; sourceTree = "<group>"; };
+		84A75BA9231F68DE009D8EF7 /* JHFileUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHFileUpload.h; sourceTree = "<group>"; };
+		84A75BAE231F6967009D8EF7 /* SuperRectOptPics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperRectOptPics.h; sourceTree = "<group>"; };
+		84A75BAF231F6967009D8EF7 /* SuperRectOptPics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperRectOptPics.m; sourceTree = "<group>"; };
 		84CAEACD22DC84D50002822D /* iTBoyer_util_tryNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iTBoyer_util_tryNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CAEACF22DC84D50002822D /* iTBoyer_util_tryNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTBoyer_util_tryNetwork.h; sourceTree = "<group>"; };
 		84CAEAD022DC84D50002822D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -190,6 +213,7 @@
 		84CAEB1222DC84F30002822D /* fts3_tokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fts3_tokenizer.h; sourceTree = "<group>"; };
 		84CAEB3422DC862C0002822D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84CAEB3522DC86B40002822D /* 弱网拍照优化方案.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "弱网拍照优化方案.png"; sourceTree = "<group>"; };
+		A91633865DCBD8BFA28D02FB /* Pods_iTBoyer_util_tryNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTBoyer_util_tryNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA87B257718407796A54DF7B /* Pods_RetryNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetryNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -221,6 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D852B983724827873802F592 /* Pods_iTBoyer_util_tryNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +358,8 @@
 			children = (
 				804E154617E811741B154B47 /* Pods-RetryNetwork.debug.xcconfig */,
 				39D57784AE419F640C62ADB2 /* Pods-RetryNetwork.release.xcconfig */,
+				44753B145BBF8DD41B168307 /* Pods-iTBoyer.util.tryNetwork.debug.xcconfig */,
+				016F43D8D39852D0326F7B5E /* Pods-iTBoyer.util.tryNetwork.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -341,13 +368,38 @@
 			isa = PBXGroup;
 			children = (
 				DA87B257718407796A54DF7B /* Pods_RetryNetwork.framework */,
+				A91633865DCBD8BFA28D02FB /* Pods_iTBoyer_util_tryNetwork.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84A75B9E231F685B009D8EF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84A75BA1231F6898009D8EF7 /* SuperAddRectTask.h */,
+				84A75BA2231F6898009D8EF7 /* SuperAddRectTask.m */,
+				84A75BAE231F6967009D8EF7 /* SuperRectOptPics.h */,
+				84A75BAF231F6967009D8EF7 /* SuperRectOptPics.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84A75BA5231F68DE009D8EF7 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				84A75BA6231F68DE009D8EF7 /* JHFileUpload.m */,
+				84A75BA7231F68DE009D8EF7 /* SingletonUpload.h */,
+				84A75BA8231F68DE009D8EF7 /* SingletonUpload.m */,
+				84A75BA9231F68DE009D8EF7 /* JHFileUpload.h */,
+			);
+			path = Upload;
 			sourceTree = "<group>";
 		};
 		84CAEACE22DC84D50002822D /* iTBoyer.util.tryNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				84A75BA5231F68DE009D8EF7 /* Upload */,
+				84A75B9E231F685B009D8EF7 /* Model */,
 				84CAEAF122DC84F30002822D /* ORM */,
 				84CAEAEF22DC84F30002822D /* SuRequest.h */,
 				84CAEAEE22DC84F30002822D /* SuRequest.m */,
@@ -356,6 +408,8 @@
 				84CAEAEC22DC84F30002822D /* SuRequestManager.h */,
 				84CAEAED22DC84F30002822D /* SuRequestManager.m */,
 				84CAEACF22DC84D50002822D /* iTBoyer_util_tryNetwork.h */,
+				84A75B9A231F6482009D8EF7 /* APIRequest.h */,
+				84A75B9B231F6482009D8EF7 /* APIRequest.m */,
 				84CAEAD022DC84D50002822D /* Info.plist */,
 			);
 			path = iTBoyer.util.tryNetwork;
@@ -461,17 +515,22 @@
 			files = (
 				84CAEB2A22DC84F40002822D /* BCDB.h in Headers */,
 				84CAEB2122DC84F40002822D /* BCSqlInt.h in Headers */,
+				84A75BAD231F68DE009D8EF7 /* JHFileUpload.h in Headers */,
 				84CAEB2022DC84F40002822D /* BCSqlReal.h in Headers */,
+				84A75BAB231F68DE009D8EF7 /* SingletonUpload.h in Headers */,
 				84CAEADF22DC84D50002822D /* iTBoyer_util_tryNetwork.h in Headers */,
 				84CAEB1422DC84F40002822D /* SuRequestManager.h in Headers */,
+				84A75BB0231F6967009D8EF7 /* SuperRectOptPics.h in Headers */,
 				84CAEB1A22DC84F40002822D /* BCORMEntityProtocol.h in Headers */,
 				84CAEB2D22DC84F40002822D /* FMDatabase+InMemoryOnDiskIO.h in Headers */,
+				84A75BA3231F6898009D8EF7 /* SuperAddRectTask.h in Headers */,
 				84CAEB2222DC84F40002822D /* BCSqlText.h in Headers */,
 				84CAEB2322DC84F40002822D /* BCSqlParameter.h in Headers */,
 				84CAEB2522DC84F40002822D /* BCReferences.h in Headers */,
 				84CAEB2B22DC84F40002822D /* BCORMHeader.h in Headers */,
 				84CAEB2422DC84F40002822D /* BCConstraints.h in Headers */,
 				84CAEB3222DC84F40002822D /* FMDatabase+FTS3.h in Headers */,
+				84A75B9C231F6482009D8EF7 /* APIRequest.h in Headers */,
 				84CAEB3322DC84F40002822D /* fts3_tokenizer.h in Headers */,
 				84CAEB3022DC84F40002822D /* FMTokenizers.h in Headers */,
 				84CAEB1722DC84F40002822D /* SuRequest.h in Headers */,
@@ -493,7 +552,6 @@
 				094336BC1FEB6AAC00EF74FF /* Frameworks */,
 				094336BD1FEB6AAC00EF74FF /* Resources */,
 				8D2A9E4FB282AD9AEE902140 /* [CP] Embed Pods Frameworks */,
-				57117EB2E397E89D4916408E /* [CP] Copy Pods Resources */,
 				84CAEAE422DC84D50002822D /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -546,6 +604,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84CAEAE922DC84D50002822D /* Build configuration list for PBXNativeTarget "iTBoyer.util.tryNetwork" */;
 			buildPhases = (
+				BCC2867B5B89E3CE2C2C3B9E /* [CP] Check Pods Manifest.lock */,
 				84CAEAC822DC84D50002822D /* Headers */,
 				84CAEAC922DC84D50002822D /* Sources */,
 				84CAEACA22DC84D50002822D /* Frameworks */,
@@ -604,6 +663,7 @@
 					};
 					84CAEACC22DC84D50002822D = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 						ProvisioningStyle = Automatic;
 					};
 					84CAEAD422DC84D50002822D = {
@@ -696,39 +756,52 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		57117EB2E397E89D4916408E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8D2A9E4FB282AD9AEE902140 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/RealReachability/RealReachability.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealReachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCC2867B5B89E3CE2C2C3B9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iTBoyer.util.tryNetwork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -745,6 +818,7 @@
 				09D238C61FF0E83B00F72E7A /* NSString+MD5.m in Sources */,
 				094337011FEBC17100EF74FF /* ZYRequest.m in Sources */,
 				094336C41FEB6AAC00EF74FF /* AppDelegate.m in Sources */,
+				84A75BB3231F6DB3009D8EF7 /* FMDatabase+FTS3.m in Sources */,
 				09F1AE1B1FEC9F5700119511 /* YQDHttpClinetCore.m in Sources */,
 				09D238C21FF0E65E00F72E7A /* YQDStorageUtils.m in Sources */,
 				094337041FEBC17E00EF74FF /* ZYRequestManager.m in Sources */,
@@ -773,12 +847,16 @@
 			files = (
 				84CAEB1C22DC84F40002822D /* BCSqlInt.m in Sources */,
 				84CAEB1822DC84F40002822D /* RetryDBManager.m in Sources */,
+				84A75BAC231F68DE009D8EF7 /* SingletonUpload.m in Sources */,
 				84CAEB3122DC84F40002822D /* FMTokenizers.m in Sources */,
 				84CAEB1E22DC84F40002822D /* BCSqlText.m in Sources */,
 				84CAEB1522DC84F40002822D /* SuRequestManager.m in Sources */,
 				84CAEB1B22DC84F40002822D /* BCSqliteType.m in Sources */,
+				84A75BA4231F6898009D8EF7 /* SuperAddRectTask.m in Sources */,
 				84CAEB1622DC84F40002822D /* SuRequest.m in Sources */,
 				84CAEB2F22DC84F40002822D /* FMDatabase+FTS3.m in Sources */,
+				84A75B9D231F6482009D8EF7 /* APIRequest.m in Sources */,
+				84A75BB1231F6967009D8EF7 /* SuperRectOptPics.m in Sources */,
 				84CAEB1D22DC84F40002822D /* BCSqlReal.m in Sources */,
 				84CAEB2822DC84F40002822D /* BCORMHelper.m in Sources */,
 				84CAEB2922DC84F40002822D /* BCSqlParameter.m in Sources */,
@@ -1042,7 +1120,9 @@
 		};
 		84CAEAE522DC84D50002822D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44753B145BBF8DD41B168307 /* Pods-iTBoyer.util.tryNetwork.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
@@ -1062,6 +1142,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jinher.com.iTBoyer-util-tryNetwork";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1070,7 +1152,9 @@
 		};
 		84CAEAE622DC84D50002822D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 016F43D8D39852D0326F7B5E /* Pods-iTBoyer.util.tryNetwork.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
@@ -1089,6 +1173,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jinher.com.iTBoyer-util-tryNetwork";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
