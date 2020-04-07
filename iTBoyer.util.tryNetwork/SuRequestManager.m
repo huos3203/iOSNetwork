@@ -212,7 +212,7 @@
     
     NSArray *pics = [[RetryDBManager shared] allRecordBy:self.optId];
     NSLog(@"个数：%ld",pics.count);
-    
+    /**
     JHFileUpload *uploader = [[SingletonUpload shared] addUploaderWithPath:opt.Picture fileGid:opt.gId];
     [uploader didUploading:^(float progress) {
         NSLog(@"%f 进度---",progress);
@@ -261,6 +261,7 @@
             }
         }
     }];
+     */
 }
 
 -(void)finishTakePhoto{

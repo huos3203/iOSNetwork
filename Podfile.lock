@@ -35,7 +35,7 @@ DEPENDENCIES:
   - RealReachability
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - FMDB
     - JSONModel
@@ -51,4 +51,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 86bef96d712d3147418cd4cb494f62702e45242c
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4
