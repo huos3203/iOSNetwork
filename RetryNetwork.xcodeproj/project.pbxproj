@@ -41,30 +41,6 @@
 		84CAEB1622DC84F40002822D /* SuRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAEE22DC84F30002822D /* SuRequest.m */; };
 		84CAEB1722DC84F40002822D /* SuRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAEF22DC84F30002822D /* SuRequest.h */; };
 		84CAEB1822DC84F40002822D /* RetryDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAF022DC84F30002822D /* RetryDBManager.m */; };
-		84CAEB1922DC84F40002822D /* classUML.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CAEAF222DC84F30002822D /* classUML.png */; };
-		84CAEB1A22DC84F40002822D /* BCORMEntityProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAF422DC84F30002822D /* BCORMEntityProtocol.h */; };
-		84CAEB1B22DC84F40002822D /* BCSqliteType.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAF622DC84F30002822D /* BCSqliteType.m */; };
-		84CAEB1C22DC84F40002822D /* BCSqlInt.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAF722DC84F30002822D /* BCSqlInt.m */; };
-		84CAEB1D22DC84F40002822D /* BCSqlReal.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAF822DC84F30002822D /* BCSqlReal.m */; };
-		84CAEB1E22DC84F40002822D /* BCSqlText.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEAF922DC84F30002822D /* BCSqlText.m */; };
-		84CAEB1F22DC84F40002822D /* BCSqliteType.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAFA22DC84F30002822D /* BCSqliteType.h */; };
-		84CAEB2022DC84F40002822D /* BCSqlReal.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAFB22DC84F30002822D /* BCSqlReal.h */; };
-		84CAEB2122DC84F40002822D /* BCSqlInt.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAFC22DC84F30002822D /* BCSqlInt.h */; };
-		84CAEB2222DC84F40002822D /* BCSqlText.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAFD22DC84F30002822D /* BCSqlText.h */; };
-		84CAEB2322DC84F40002822D /* BCSqlParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEAFE22DC84F30002822D /* BCSqlParameter.h */; };
-		84CAEB2422DC84F40002822D /* BCConstraints.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB0022DC84F30002822D /* BCConstraints.h */; };
-		84CAEB2522DC84F40002822D /* BCReferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB0122DC84F30002822D /* BCReferences.h */; };
-		84CAEB2622DC84F40002822D /* BCConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEB0222DC84F30002822D /* BCConstraints.m */; };
-		84CAEB2722DC84F40002822D /* BCReferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEB0322DC84F30002822D /* BCReferences.m */; };
-		84CAEB2822DC84F40002822D /* BCORMHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEB0422DC84F30002822D /* BCORMHelper.m */; };
-		84CAEB2922DC84F40002822D /* BCSqlParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAEB0522DC84F30002822D /* BCSqlParameter.m */; };
-		84CAEB2A22DC84F40002822D /* BCDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB0622DC84F30002822D /* BCDB.h */; };
-		84CAEB2B22DC84F40002822D /* BCORMHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB0722DC84F30002822D /* BCORMHeader.h */; };
-		84CAEB2C22DC84F40002822D /* BCORMHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB0822DC84F30002822D /* BCORMHelper.h */; };
-		84CAEB2D22DC84F40002822D /* FMDatabase+InMemoryOnDiskIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB0B22DC84F30002822D /* FMDatabase+InMemoryOnDiskIO.h */; };
-		84CAEB3022DC84F40002822D /* FMTokenizers.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB0F22DC84F30002822D /* FMTokenizers.h */; };
-		84CAEB3222DC84F40002822D /* FMDatabase+FTS3.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB1122DC84F30002822D /* FMDatabase+FTS3.h */; };
-		84CAEB3322DC84F40002822D /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CAEB1222DC84F30002822D /* fts3_tokenizer.h */; };
 		B84BACDE70601B7564AEF6EB /* Pods_RetryNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA87B257718407796A54DF7B /* Pods_RetryNetwork.framework */; };
 		D852B983724827873802F592 /* Pods_iTBoyer_util_tryNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91633865DCBD8BFA28D02FB /* Pods_iTBoyer_util_tryNetwork.framework */; };
 /* End PBXBuildFile section */
@@ -134,10 +110,10 @@
 		094336D01FEB6AAD00EF74FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094336D11FEB6AAD00EF74FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		094336D71FEB6AAD00EF74FF /* RetryNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetryNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		094336DB1FEB6AAD00EF74FF /* ______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ______Tests.m; sourceTree = "<group>"; };
+		094336DB1FEB6AAD00EF74FF /* ______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______Tests.m"; sourceTree = "<group>"; };
 		094336DD1FEB6AAD00EF74FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094336E21FEB6AAD00EF74FF /* RetryNetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetryNetworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		094336E61FEB6AAD00EF74FF /* ______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ______UITests.m; sourceTree = "<group>"; };
+		094336E61FEB6AAD00EF74FF /* ______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______UITests.m"; sourceTree = "<group>"; };
 		094336E81FEB6AAD00EF74FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094336FF1FEBC17100EF74FF /* ZYRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYRequest.h; sourceTree = "<group>"; };
 		094337001FEBC17100EF74FF /* ZYRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYRequest.m; sourceTree = "<group>"; };
@@ -179,33 +155,6 @@
 		84CAEAEE22DC84F30002822D /* SuRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuRequest.m; sourceTree = "<group>"; };
 		84CAEAEF22DC84F30002822D /* SuRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuRequest.h; sourceTree = "<group>"; };
 		84CAEAF022DC84F30002822D /* RetryDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetryDBManager.m; sourceTree = "<group>"; };
-		84CAEAF222DC84F30002822D /* classUML.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = classUML.png; sourceTree = "<group>"; };
-		84CAEAF422DC84F30002822D /* BCORMEntityProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCORMEntityProtocol.h; sourceTree = "<group>"; };
-		84CAEAF622DC84F30002822D /* BCSqliteType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSqliteType.m; sourceTree = "<group>"; };
-		84CAEAF722DC84F30002822D /* BCSqlInt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSqlInt.m; sourceTree = "<group>"; };
-		84CAEAF822DC84F30002822D /* BCSqlReal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSqlReal.m; sourceTree = "<group>"; };
-		84CAEAF922DC84F30002822D /* BCSqlText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSqlText.m; sourceTree = "<group>"; };
-		84CAEAFA22DC84F30002822D /* BCSqliteType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSqliteType.h; sourceTree = "<group>"; };
-		84CAEAFB22DC84F30002822D /* BCSqlReal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSqlReal.h; sourceTree = "<group>"; };
-		84CAEAFC22DC84F30002822D /* BCSqlInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSqlInt.h; sourceTree = "<group>"; };
-		84CAEAFD22DC84F30002822D /* BCSqlText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSqlText.h; sourceTree = "<group>"; };
-		84CAEAFE22DC84F30002822D /* BCSqlParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSqlParameter.h; sourceTree = "<group>"; };
-		84CAEB0022DC84F30002822D /* BCConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCConstraints.h; sourceTree = "<group>"; };
-		84CAEB0122DC84F30002822D /* BCReferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCReferences.h; sourceTree = "<group>"; };
-		84CAEB0222DC84F30002822D /* BCConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCConstraints.m; sourceTree = "<group>"; };
-		84CAEB0322DC84F30002822D /* BCReferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCReferences.m; sourceTree = "<group>"; };
-		84CAEB0422DC84F30002822D /* BCORMHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCORMHelper.m; sourceTree = "<group>"; };
-		84CAEB0522DC84F30002822D /* BCSqlParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSqlParameter.m; sourceTree = "<group>"; };
-		84CAEB0622DC84F30002822D /* BCDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCDB.h; sourceTree = "<group>"; };
-		84CAEB0722DC84F30002822D /* BCORMHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCORMHeader.h; sourceTree = "<group>"; };
-		84CAEB0822DC84F30002822D /* BCORMHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCORMHelper.h; sourceTree = "<group>"; };
-		84CAEB0B22DC84F30002822D /* FMDatabase+InMemoryOnDiskIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+InMemoryOnDiskIO.h"; sourceTree = "<group>"; };
-		84CAEB0C22DC84F30002822D /* FMDatabase+InMemoryOnDiskIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+InMemoryOnDiskIO.m"; sourceTree = "<group>"; };
-		84CAEB0E22DC84F30002822D /* FMDatabase+FTS3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+FTS3.m"; sourceTree = "<group>"; };
-		84CAEB0F22DC84F30002822D /* FMTokenizers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTokenizers.h; sourceTree = "<group>"; };
-		84CAEB1022DC84F30002822D /* FMTokenizers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTokenizers.m; sourceTree = "<group>"; };
-		84CAEB1122DC84F30002822D /* FMDatabase+FTS3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+FTS3.h"; sourceTree = "<group>"; };
-		84CAEB1222DC84F30002822D /* fts3_tokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fts3_tokenizer.h; sourceTree = "<group>"; };
 		84CAEB3422DC862C0002822D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84CAEB3522DC86B40002822D /* 弱网拍照优化方案.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "弱网拍照优化方案.png"; sourceTree = "<group>"; };
 		A91633865DCBD8BFA28D02FB /* Pods_iTBoyer_util_tryNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTBoyer_util_tryNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -395,7 +344,6 @@
 			children = (
 				84A75BA5231F68DE009D8EF7 /* Upload */,
 				84A75B9E231F685B009D8EF7 /* Model */,
-				84CAEAF122DC84F30002822D /* ORM */,
 				84CAEAEF22DC84F30002822D /* SuRequest.h */,
 				84CAEAEE22DC84F30002822D /* SuRequest.m */,
 				84CAEAEB22DC84F30002822D /* RetryDBManager.h */,
@@ -419,88 +367,6 @@
 			path = iTBoyer.util.tryNetworkTests;
 			sourceTree = "<group>";
 		};
-		84CAEAF122DC84F30002822D /* ORM */ = {
-			isa = PBXGroup;
-			children = (
-				84CAEAF222DC84F30002822D /* classUML.png */,
-				84CAEAF322DC84F30002822D /* BCSqliteORM */,
-				84CAEB0922DC84F30002822D /* FFDB-extra */,
-			);
-			path = ORM;
-			sourceTree = "<group>";
-		};
-		84CAEAF322DC84F30002822D /* BCSqliteORM */ = {
-			isa = PBXGroup;
-			children = (
-				84CAEAF422DC84F30002822D /* BCORMEntityProtocol.h */,
-				84CAEAF522DC84F30002822D /* SqliteType */,
-				84CAEAFF22DC84F30002822D /* SqliteConstraints */,
-				84CAEB0622DC84F30002822D /* BCDB.h */,
-				84CAEB0722DC84F30002822D /* BCORMHeader.h */,
-				84CAEAFE22DC84F30002822D /* BCSqlParameter.h */,
-				84CAEB0522DC84F30002822D /* BCSqlParameter.m */,
-				84CAEB0822DC84F30002822D /* BCORMHelper.h */,
-				84CAEB0422DC84F30002822D /* BCORMHelper.m */,
-			);
-			path = BCSqliteORM;
-			sourceTree = "<group>";
-		};
-		84CAEAF522DC84F30002822D /* SqliteType */ = {
-			isa = PBXGroup;
-			children = (
-				84CAEAFC22DC84F30002822D /* BCSqlInt.h */,
-				84CAEAF722DC84F30002822D /* BCSqlInt.m */,
-				84CAEAFB22DC84F30002822D /* BCSqlReal.h */,
-				84CAEAF822DC84F30002822D /* BCSqlReal.m */,
-				84CAEAFD22DC84F30002822D /* BCSqlText.h */,
-				84CAEAF922DC84F30002822D /* BCSqlText.m */,
-				84CAEAFA22DC84F30002822D /* BCSqliteType.h */,
-				84CAEAF622DC84F30002822D /* BCSqliteType.m */,
-			);
-			path = SqliteType;
-			sourceTree = "<group>";
-		};
-		84CAEAFF22DC84F30002822D /* SqliteConstraints */ = {
-			isa = PBXGroup;
-			children = (
-				84CAEB0022DC84F30002822D /* BCConstraints.h */,
-				84CAEB0222DC84F30002822D /* BCConstraints.m */,
-				84CAEB0122DC84F30002822D /* BCReferences.h */,
-				84CAEB0322DC84F30002822D /* BCReferences.m */,
-			);
-			path = SqliteConstraints;
-			sourceTree = "<group>";
-		};
-		84CAEB0922DC84F30002822D /* FFDB-extra */ = {
-			isa = PBXGroup;
-			children = (
-				84CAEB0A22DC84F30002822D /* InMemoryOnDiskIO */,
-				84CAEB0D22DC84F30002822D /* fts3 */,
-			);
-			path = "FFDB-extra";
-			sourceTree = "<group>";
-		};
-		84CAEB0A22DC84F30002822D /* InMemoryOnDiskIO */ = {
-			isa = PBXGroup;
-			children = (
-				84CAEB0B22DC84F30002822D /* FMDatabase+InMemoryOnDiskIO.h */,
-				84CAEB0C22DC84F30002822D /* FMDatabase+InMemoryOnDiskIO.m */,
-			);
-			path = InMemoryOnDiskIO;
-			sourceTree = "<group>";
-		};
-		84CAEB0D22DC84F30002822D /* fts3 */ = {
-			isa = PBXGroup;
-			children = (
-				84CAEB1222DC84F30002822D /* fts3_tokenizer.h */,
-				84CAEB0F22DC84F30002822D /* FMTokenizers.h */,
-				84CAEB1022DC84F30002822D /* FMTokenizers.m */,
-				84CAEB1122DC84F30002822D /* FMDatabase+FTS3.h */,
-				84CAEB0E22DC84F30002822D /* FMDatabase+FTS3.m */,
-			);
-			path = fts3;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -508,30 +374,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84CAEB2A22DC84F40002822D /* BCDB.h in Headers */,
-				84CAEB2122DC84F40002822D /* BCSqlInt.h in Headers */,
 				84A75BAD231F68DE009D8EF7 /* JHFileUpload.h in Headers */,
-				84CAEB2022DC84F40002822D /* BCSqlReal.h in Headers */,
 				84A75BAB231F68DE009D8EF7 /* SingletonUpload.h in Headers */,
 				84CAEADF22DC84D50002822D /* iTBoyer_util_tryNetwork.h in Headers */,
 				84CAEB1422DC84F40002822D /* SuRequestManager.h in Headers */,
 				84A75BB0231F6967009D8EF7 /* SuperRectOptPics.h in Headers */,
-				84CAEB1A22DC84F40002822D /* BCORMEntityProtocol.h in Headers */,
-				84CAEB2D22DC84F40002822D /* FMDatabase+InMemoryOnDiskIO.h in Headers */,
 				84A75BA3231F6898009D8EF7 /* SuperAddRectTask.h in Headers */,
-				84CAEB2222DC84F40002822D /* BCSqlText.h in Headers */,
-				84CAEB2322DC84F40002822D /* BCSqlParameter.h in Headers */,
-				84CAEB2522DC84F40002822D /* BCReferences.h in Headers */,
-				84CAEB2B22DC84F40002822D /* BCORMHeader.h in Headers */,
-				84CAEB2422DC84F40002822D /* BCConstraints.h in Headers */,
-				84CAEB3222DC84F40002822D /* FMDatabase+FTS3.h in Headers */,
 				84A75B9C231F6482009D8EF7 /* APIRequest.h in Headers */,
-				84CAEB3322DC84F40002822D /* fts3_tokenizer.h in Headers */,
-				84CAEB3022DC84F40002822D /* FMTokenizers.h in Headers */,
 				84CAEB1722DC84F40002822D /* SuRequest.h in Headers */,
-				84CAEB2C22DC84F40002822D /* BCORMHelper.h in Headers */,
 				84CAEB1322DC84F40002822D /* RetryDBManager.h in Headers */,
-				84CAEB1F22DC84F40002822D /* BCSqliteType.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,7 +570,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84CAEB1922DC84F40002822D /* classUML.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,6 +614,9 @@
 				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
 				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/RealReachability/RealReachability.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/ORM2FMDB/ORM2FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -773,6 +626,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealReachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ORM2FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -841,20 +697,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84CAEB1C22DC84F40002822D /* BCSqlInt.m in Sources */,
 				84CAEB1822DC84F40002822D /* RetryDBManager.m in Sources */,
-				84CAEB1E22DC84F40002822D /* BCSqlText.m in Sources */,
 				84CAEB1522DC84F40002822D /* SuRequestManager.m in Sources */,
-				84CAEB1B22DC84F40002822D /* BCSqliteType.m in Sources */,
 				84A75BA4231F6898009D8EF7 /* SuperAddRectTask.m in Sources */,
 				84CAEB1622DC84F40002822D /* SuRequest.m in Sources */,
 				84A75B9D231F6482009D8EF7 /* APIRequest.m in Sources */,
 				84A75BB1231F6967009D8EF7 /* SuperRectOptPics.m in Sources */,
-				84CAEB1D22DC84F40002822D /* BCSqlReal.m in Sources */,
-				84CAEB2822DC84F40002822D /* BCORMHelper.m in Sources */,
-				84CAEB2922DC84F40002822D /* BCSqlParameter.m in Sources */,
-				84CAEB2622DC84F40002822D /* BCConstraints.m in Sources */,
-				84CAEB2722DC84F40002822D /* BCReferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
