@@ -122,7 +122,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		016F43D8D39852D0326F7B5E /* Pods-iTBoyer.util.tryNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTBoyer.util.tryNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTBoyer.util.tryNetwork/Pods-iTBoyer.util.tryNetwork.release.xcconfig"; sourceTree = "<group>"; };
+		016F43D8D39852D0326F7B5E /* Pods-iTBoyer.util.tryNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTBoyer.util.tryNetwork.release.xcconfig"; path = "../iSmallApp/Pods/Target Support Files/Pods-iTBoyer.util.tryNetwork/Pods-iTBoyer.util.tryNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		094336BF1FEB6AAC00EF74FF /* RetryNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetryNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		094336C21FEB6AAC00EF74FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		094336C31FEB6AAC00EF74FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -134,10 +134,10 @@
 		094336D01FEB6AAD00EF74FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094336D11FEB6AAD00EF74FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		094336D71FEB6AAD00EF74FF /* RetryNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetryNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		094336DB1FEB6AAD00EF74FF /* ______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______Tests.m"; sourceTree = "<group>"; };
+		094336DB1FEB6AAD00EF74FF /* ______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ______Tests.m; sourceTree = "<group>"; };
 		094336DD1FEB6AAD00EF74FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094336E21FEB6AAD00EF74FF /* RetryNetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetryNetworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		094336E61FEB6AAD00EF74FF /* ______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______UITests.m"; sourceTree = "<group>"; };
+		094336E61FEB6AAD00EF74FF /* ______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ______UITests.m; sourceTree = "<group>"; };
 		094336E81FEB6AAD00EF74FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		094336FF1FEBC17100EF74FF /* ZYRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYRequest.h; sourceTree = "<group>"; };
 		094337001FEBC17100EF74FF /* ZYRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYRequest.m; sourceTree = "<group>"; };
@@ -154,9 +154,9 @@
 		09F1AE191FEC9F5700119511 /* YQDHttpClinetCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQDHttpClinetCore.h; sourceTree = "<group>"; };
 		09F1AE1A1FEC9F5700119511 /* YQDHttpClinetCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQDHttpClinetCore.m; sourceTree = "<group>"; };
 		09F1AE1D1FECB9B500119511 /* ZYRequestMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYRequestMacro.h; sourceTree = "<group>"; };
-		39D57784AE419F640C62ADB2 /* Pods-RetryNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetryNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork.release.xcconfig"; sourceTree = "<group>"; };
-		44753B145BBF8DD41B168307 /* Pods-iTBoyer.util.tryNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTBoyer.util.tryNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTBoyer.util.tryNetwork/Pods-iTBoyer.util.tryNetwork.debug.xcconfig"; sourceTree = "<group>"; };
-		804E154617E811741B154B47 /* Pods-RetryNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetryNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		39D57784AE419F640C62ADB2 /* Pods-RetryNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetryNetwork.release.xcconfig"; path = "../iSmallApp/Pods/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork.release.xcconfig"; sourceTree = "<group>"; };
+		44753B145BBF8DD41B168307 /* Pods-iTBoyer.util.tryNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTBoyer.util.tryNetwork.debug.xcconfig"; path = "../iSmallApp/Pods/Target Support Files/Pods-iTBoyer.util.tryNetwork/Pods-iTBoyer.util.tryNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		804E154617E811741B154B47 /* Pods-RetryNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetryNetwork.debug.xcconfig"; path = "../iSmallApp/Pods/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		84A75B9A231F6482009D8EF7 /* APIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIRequest.h; sourceTree = "<group>"; };
 		84A75B9B231F6482009D8EF7 /* APIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIRequest.m; sourceTree = "<group>"; };
 		84A75BA1231F6898009D8EF7 /* SuperAddRectTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperAddRectTask.h; sourceTree = "<group>"; };
@@ -759,18 +759,20 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/RealReachability/RealReachability.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealReachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
