@@ -608,13 +608,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking-iOS13.0/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB-iOS13.0/FMDB.framework",
-				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
-				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONModel-iOS13.0/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs-iOS13.0/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/ORM2FMDB-iOS13.0/ORM2FMDB.framework",
-				"${BUILT_PRODUCTS_DIR}/RealReachability/RealReachability.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealReachability-iOS13.0/RealReachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm-iOS13.0/Realm.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
