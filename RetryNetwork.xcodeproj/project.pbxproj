@@ -609,20 +609,24 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RetryNetwork/Pods-RetryNetwork-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking-iOS13.0/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking3-RACExtensions-iOS13.0/AFNetworking3_RACExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB-iOS13.0/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/JSONModel-iOS13.0/JSONModel.framework",
 				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs-iOS13.0/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/ORM2FMDB-iOS13.0/ORM2FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa-iOS13.0/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RealReachability-iOS13.0/RealReachability.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm-iOS13.0/Realm.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking3_RACExtensions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ORM2FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealReachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 			);
